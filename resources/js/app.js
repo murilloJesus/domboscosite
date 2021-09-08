@@ -12,8 +12,8 @@ const app = createApp({
         Galeria
     },
     mounted(){
-        main()
         util()
+        main()
     }
 }).mount('#app');
 
