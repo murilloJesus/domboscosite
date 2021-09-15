@@ -6,9 +6,10 @@
 -->
 <html>
 	<head>
-		<title>TXT by HTML5 UP</title>
+		<title>Colégio Dom Bosco - Sorocaba</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="icon" type="image/png" href="/images/icon.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 
@@ -70,7 +71,59 @@
 
 
                 <!-- Banner -->
-                <banner></banner>
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    {{-- <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 2"></button>
+                    </div> --}}
+                    <div class="carousel-inner">
+                        <div id="banner" class="carousel-item banner-2">
+                            <div class="content">
+                                <h2>O Melhor ensino para seu filho </h2>
+                                <p>Qualidade e cuidado deixe com a equipe do Colégio Múltiplo.</p>
+                                <a href="#main" class="button scrolly" style="visibility: hidden">&nbsp;</a>
+                            </div>
+                        </div>
+                        <div id="banner" class="carousel-item active banner-1">
+                            <div class="content">
+                                <h2>Colégio Dom Bosco</h3>
+                                <p>Matriculas Abertas! Confira as nossas</p>
+                                <a href="#main" class="button scrolly">Conferir</a>
+                            </div>
+                        </div>
+                        <div id="banner" class="carousel-item banner-2">
+                            <div class="content">
+                                <h2>O Melhor ensino para seu filho </h2>
+                                <p>Qualidade e cuidado deixe com a equipe do Colégio Múltiplo.</p>
+                                <a href="#main" class="button scrolly" style="visibility: hidden">&nbsp;</a>
+                            </div>
+                        </div>
+                        <div id="banner" class="carousel-item banner-1">
+                            <div class="content">
+                                <h2>Colégio Dom Bosco</h3>
+                                <p>Matriculas Abertas! Confira as nossas</p>
+                                <a href="#main" class="button scrolly">Conferir</a>
+                            </div>
+                        </div>
+                        <div id="banner" class="carousel-item banner-2">
+                            <div class="content">
+                                <h2>O Melhor ensino para seu filho </h2>
+                                <p>Qualidade e cuidado deixe com a equipe do Colégio Múltiplo.</p>
+                                <a href="#main" class="button scrolly" style="visibility: hidden">&nbsp;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
 
                 <!-- Main -->
 				<section id="main">

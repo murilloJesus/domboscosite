@@ -1,7 +1,7 @@
 <template>
-    <section id="banner" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <section class="carousel slide carousel-fade">
             <div class="carousel-inner">
-                <div class="carousel-item" v-for="(item, index) in banners" :key="index">
+                <div id="banner" class="carousel-item active" v-for="(item, index) in banners" :key="index">
                     <div class="content">
                         <h2>{{item.header}}</h2>
                         <p>{{item.text}}</p>

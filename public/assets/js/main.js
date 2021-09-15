@@ -6,7 +6,7 @@
 
 const NOME = 'Colégio Dom Bosco';
 
-(function($) {
+function main () {
 
 	var	$window = $(window),
 		$body = $('body'),
@@ -73,4 +73,4 @@ const NOME = 'Colégio Dom Bosco';
 					visibleClass: 'navPanel-visible'
 				});
 
-})(jQuery);
+}
