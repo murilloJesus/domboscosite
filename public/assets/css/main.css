@@ -2476,11 +2476,11 @@ input, select, textarea {
 /* Banner */
 
     .banner-1{
-        background-image: url("images/overlay.png"), url("images/overlay.png"), url("/images/banner.webp");
+        background-image: url("images/overlay.png"), url("images/overlay.png"), url("/public/images/banner.webp");
     }
 
     .banner-2{
-        background-image: url("images/overlay.png"), url("images/overlay.png"), url("/images/banner2.webp");
+        background-image: url("images/overlay.png"), url("images/overlay.png"), url("/public/images/banner2.webp");
     }
 
 	#banner {
