@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware([RegisterAccess::class])->group(function (){
+Route::middleware([RegisterAccess::class])->prefix('vWVPSbUHIRJ')->group(function (){
     Route::get('/', function () {
         return view('welcome');
     });
