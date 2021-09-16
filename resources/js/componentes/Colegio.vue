@@ -16,7 +16,7 @@
                 </header>
 
                 <section>
-                    <span class="image featured"><img src="images/pic05.jpg" alt="" /></span>
+                    <span class="image featured"><img src="/public/images/pic05.jpg" alt="" /></span>
                     <p>
                         Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
                         Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
@@ -133,7 +133,7 @@
             <!-- Something -->
             <section>
                 <h2 class="major"><span>Ipsum Dolore</span></h2>
-                <a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="/public/images/pic03.jpg" alt="" /></a>
                 <p>
                     Donec sagittis massa et leo semper scele risque metus faucibus. Morbi congue mattis mi.
                     Phasellus sed nisl vitae risus tristique volutpat. Cras rutrum sed commodo luctus blandit.

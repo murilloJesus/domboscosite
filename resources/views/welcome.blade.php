@@ -9,7 +9,7 @@
 		<title>Colégio Dom Bosco - Sorocaba</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="icon" type="image/png" href="/public/assets/images/icon.png" />
+        <link rel="icon" type="image/png" href="/public/images/icon.png" />
 		<link rel="stylesheet" href="/public/assets/css/main.css" />
 		<link rel="stylesheet" href="/public/assets/css/bootstrap.min.css" />
 

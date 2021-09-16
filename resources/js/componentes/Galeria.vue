@@ -18,7 +18,7 @@
                                         <li class="icon fa-comments"><a href="#">8</a></li>
                                     </ul>
                                 </header>
-                                <a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
+                                <a href="#" class="image featured"><img src="/public/images/pic05.jpg" alt="" /></a>
                             </article>
 
                         </div>
