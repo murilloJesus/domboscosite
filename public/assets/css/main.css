@@ -1824,7 +1824,7 @@ input, select, textarea {
 		input[type="reset"].alt,
 		button.alt,
 		.button.alt {
-			background: #fd6468;
+			background: #ee7623;
 		}
 
 			input[type="button"].alt:hover,
@@ -1882,8 +1882,8 @@ input, select, textarea {
 
 		ul.divided > li {
 			border-top: solid 2px #E48749;
-			padding-top: 2.35em;
-			margin-top: 2.35em;
+			padding-top: 1em;
+			margin-top: 1em;
 			padding-left: 0;
 		}
 
@@ -1915,9 +1915,17 @@ input, select, textarea {
 /* Contact */
 
 	ul.contact {
-		list-style: none;
-		padding-left: 0;
-		cursor: default;
+        list-style: none;
+        padding-left: 0;
+        cursor: default;
+        position: fixed;
+        right: 0px;
+        bottom: 20px;
+        z-index: 1001;
+        padding: 10px 42px 10px 6px;
+        background: rgba(211, 211, 211, 0.8);
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
 	}
 
 		ul.contact li {
@@ -2401,12 +2409,12 @@ input, select, textarea {
 			}
 
 			#nav li:hover a, #nav li:hover span {
-				background: #fd6468;
+				background: #ee7623;
 				color: #fff;
 			}
 
 			#nav li.active a, #nav li.active span {
-				background: #fd6468;
+				background: #ee7623;
 				color: #fff;
 			}
 
@@ -2417,7 +2425,7 @@ input, select, textarea {
 
 	.dropotron {
 		list-style: none;
-		background: #7a72bd;
+		background: #fff;
 		color: #fff;
 		border-radius: 6px;
 		line-height: 2.75em;
@@ -2438,19 +2446,19 @@ input, select, textarea {
 
 			.dropotron li > a, .dropotron li > span {
 				display: block;
-				color: #D7DAD8;
+				color: #202945;
 				text-decoration: none;
 				padding: 0 1.25em;
 			}
 
 			.dropotron li:hover > a, .dropotron li:hover > span {
 				color: #fff;
-				background:	#fd6468;
+				background:	#202945;
 			}
 
 			.dropotron li.active > a, .dropotron li.active > span {
 				color: #fff;
-				background: #fd6468;
+				background: #202945;
 			}
 
 			.dropotron li:first-child {
@@ -2468,7 +2476,7 @@ input, select, textarea {
 				left: 50%;
 				margin-left: -1em;
 				top: -0.65em;
-				border-bottom: solid 1em #7a72bd;
+				border-bottom: solid 1em #fff;
 				border-left: solid 1em transparent;
 				border-right: solid 1em transparent;
 			}
@@ -2898,7 +2906,7 @@ input, select, textarea {
 				}
 
 					#navPanel .link:hover {
-						background-color: 	#fd6468;
+						background-color: 	#ee7623;
 					}
 
 					#navPanel .link:first-child {

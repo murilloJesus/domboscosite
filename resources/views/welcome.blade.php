@@ -53,7 +53,7 @@
                                 <li><a href="#">Ensino Fundamental 1</a></li>
                                 <li><a href="#">Ensino Fundamental 2</a></li>
                                 <li><a href="#">Integral e Bílingue</a></li>
-                                <li><a href="#">Curso Extracurriculares</a>
+                                <li><a href="#">Cursos Extracurriculares</a>
                                     <ul>
                                         <li><a href="">Ballet</a></li>
                                         <li><a href="">Bi-Bot</a></li>
