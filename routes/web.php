@@ -20,6 +20,9 @@ Route::middleware([RegisterAccess::class])->prefix('vWVPSbUHIRJ')->group(functio
     });
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->prefix('admin')->group( function () {
+
+    Route::get('/{pagina}', function ($pagina) {
+        return view("admin.$pagina");
+    });
+});
