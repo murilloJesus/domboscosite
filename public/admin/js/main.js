@@ -125,6 +125,8 @@ function main() {
 
 		 $('#data-table-basic').DataTable();
 
+        $("#app").css('display', 'block')
+
    }
 
    $(window).on("load",function(){

@@ -1,30 +1,15 @@
 import { createApp } from 'vue'
 import Tabela from './admin/componentes/table.vue'
 import Formulario from './admin/componentes/form.vue'
-
-import { reactive } from '@vue/reactivity'
+import * as Inputs from './admin/inputs/index.js'
 
 const app = createApp({
     components: {
         Tabela,
-        Formulario
+        Formulario,
+        ...Inputs
     },
-    data: () => {
-      return {
-          component: 'formulario',
-          controller: window.controller
-      }
-    },
-    computed: {
-        formulario: {
-            get(){
-                return this.controller.formulario
-            },
-            set(val){
-                this.controller.formulario = val
-            }
-        }
-    }
+    ...window.controller,
 }).mount('#app')
 
 const controller = createApp({

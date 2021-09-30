@@ -14,7 +14,7 @@ class PageController extends Controller
      */
     public function index()
     {
-        //
+        return Page::all(['id', 'name']);
     }
 
     /**
@@ -35,7 +35,7 @@ class PageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Page::create($request->post());
     }
 
     /**

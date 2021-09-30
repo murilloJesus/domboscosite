@@ -32,10 +32,10 @@
     <link rel="stylesheet" href="/public/admin/css/animate.css">
     <!-- summernote CSS
 		============================================ -->
-    <link rel="stylesheet" href="css/summernote/summernote.css">
+    <link rel="stylesheet" href="/public/admin/css/summernote/summernote.css">
     <!-- Range Slider CSS
         ============================================ -->
-    <link rel="stylesheet" href="css/themesaller-forms.css">
+    <link rel="stylesheet" href="/public/admin/css/themesaller-forms.css">
     <!-- normalize CSS
 		============================================ -->
     <link rel="stylesheet" href="/public/admin/css/normalize.css">
@@ -72,6 +72,7 @@
     <!-- wave CSS
 		============================================ -->
     <link rel="stylesheet" href="/public/admin/css/wave/waves.min.css">
+    <link rel="stylesheet" href="/public/admin/css/wave/button.css">
     <!-- main CSS
 		============================================ -->
     <link rel="stylesheet" href="/public/admin/css/main.css">
@@ -632,7 +633,6 @@
             </div>
         </div>
     </div>
-    @yield('configs')
     <!-- End Footer area-->
     <!-- jquery
 		============================================ -->
@@ -723,7 +723,7 @@
     <script src="/public/admin/js/wave/wave-active.js"></script>
     <!--  chosen JS
 		============================================ -->
-    <script src="js/chosen/chosen.jquery.js"></script>
+    <script src="/public/admin/js/chosen/chosen.jquery.js"></script>
     <!--  todo JS
 		============================================ -->
     <script src="/public/admin/js/todo/jquery.todo.js"></script>
@@ -737,6 +737,11 @@
     <!-- main JS
 		============================================ -->
     <script src="/public/admin/js/main.js"></script>
+
+    <script src="/public/js/class.admin.js"></script>
+
+    @yield('configs')
+
 
     <script src="{{ asset('/public/js/admin.js') }}" defer></script>
 

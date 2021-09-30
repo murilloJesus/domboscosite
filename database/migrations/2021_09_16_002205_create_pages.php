@@ -17,10 +17,10 @@ class CreatePages extends Migration
         Schema::create('pages', function (Blueprint $table) {
             $table->id();
             $table->text('name');
-            $table->text('alias');
-            $table->text('content');
+            $table->text('alias')->nullable();
+            $table->text('content')->nullable();
             $table->integer('times_accessed')->default(0);
-            $table->foreignIdFor(Page::class);
+            $table->foreignIdFor(Page::class)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
