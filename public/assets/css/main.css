@@ -2484,14 +2484,18 @@ input, select, textarea {
 /* Banner */
 
     .banner-1{
-        background-image: url("images/overlay.png"), url("images/overlay.png"), url("/public/images/banner.webp");
+        background-image: url("images/overlay.png"), url("images/overlay.png"), url("/public/images/banner (1).jpeg");
     }
 
     .banner-2{
-        background-image: url("images/overlay.png"), url("images/overlay.png"), url("/public/images/banner2.webp");
+        background-image: url("images/overlay.png"), url("images/overlay.png"), url("/public/images/banner (2).jpeg");
     }
 
-	#banner {
+    .banner-3{
+        background-image: url("images/overlay.png"), url("images/overlay.png"), url("/public/images/banner (3).jpeg");
+    }
+
+	#Carousel .banner {
 		position: relative;
 		background-position: top left, top left, center center;
 		background-repeat: repeat, repeat, no-repeat;

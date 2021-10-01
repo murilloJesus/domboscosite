@@ -123,7 +123,7 @@ function main() {
            animation: 'fade'
        });
 
-		 $('#data-table-basic').DataTable();
+		//  $('#data-table-basic').DataTable();
 
         $("#app").css('display', 'block')
 

@@ -2725,9 +2725,9 @@ hr {
     color: #fff!important;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button {
-    width: 35px;
+    width: 40px;
     height: 35px;
-    border-radius: 50%;
+    border-radius: 15%;
     background-color: #f1f1f1;
     vertical-align: top;
     color: #7E7E7E!important;
