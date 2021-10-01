@@ -1,13 +1,10 @@
 import { createApp } from 'vue'
-import Tabela from './admin/componentes/table.vue'
-import Formulario from './admin/componentes/form.vue'
-import * as Inputs from './admin/inputs/index.js'
+
+import * as Pages from './admin/pages'
 
 const app = createApp({
     components: {
-        Tabela,
-        Formulario,
-        ...Inputs
+        ...Pages
     },
     ...window.controller,
 }).mount('#app')

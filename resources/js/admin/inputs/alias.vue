@@ -17,19 +17,24 @@ export default {
     },
     setup(props){
 
-        const path = ref('')
+        const path = ref(''),
+              page_id = ref(null)
 
         async function getPath(id){
            path.value = (await axios.get(`/api/pages/${id}`)).data.alias
         }
 
         function setField(){
-            props.fieldset[props.field] = `${path}/${normalize_url(props.fieldset.name)}`
+            props.fieldset[props.field] = `${path.value}/${normalize_url(props.fieldset.name)}`
         }
 
-        watch(props.fieldset, async (newV, oldV) => {
-            if(newV.page_id != oldV.page_id)
-                await  getPath(newV)
+        watch(props.fieldset, async (newV) => {
+
+            if(page_id.value != newV.page_id){
+                page_id.value = newV.page_id
+                await  getPath(newV.page_id)
+            }
+
             setField()
         })
     }
