@@ -77,27 +77,27 @@
                         <button type="button" data-bs-target="#Carousel" data-bs-slide-to="2" aria-label="Slide 2"></button>
                     </div> --}}
                     <div class="carousel-inner">
-                        <divclass="carousel-item banner banner-1 active">
-                            {{-- <div class="content">
+                        <div id="banner" class="carousel-item banner-1 active">
+                            <div class="content" style="visibility: hidden">
                                 <h2>O Melhor ensino para seu filho </h2>
                                 <p>Qualidade e cuidado deixe com a equipe do Colégio Múltiplo.</p>
                                 <a href="#main" class="button scrolly" style="visibility: hidden">&nbsp;</a>
-                            </div> --}}
-                        </divclass=>
-                        <div class="carousel-item banner banner-2">
-                            {{-- <div class="content">
-                                <h2>O Melhor ensino para seu filho </h2>
-                                <p>Qualidade e cuidado deixe com a equipe do Colégio Múltiplo.</p>
-                                <a href="#main" class="button scrolly" style="visibility: hidden">&nbsp;</a>
-                            </div> --}}
+                            </div>
                         </div>
-                        <divclass="carousel-item banner banner-3">
-                            {{-- <div class="content">
+                        <div id="banner" class="carousel-item banner-2">
+                            <div class="content" style="visibility: hidden">
                                 <h2>O Melhor ensino para seu filho </h2>
                                 <p>Qualidade e cuidado deixe com a equipe do Colégio Múltiplo.</p>
                                 <a href="#main" class="button scrolly" style="visibility: hidden">&nbsp;</a>
-                            </div> --}}
-                        </divclass=>
+                            </div>
+                        </div>
+                        <div id="banner" class="carousel-item banner-3">
+                            <div class="content" style="visibility: hidden">
+                                <h2>O Melhor ensino para seu filho </h2>
+                                <p>Qualidade e cuidado deixe com a equipe do Colégio Múltiplo.</p>
+                                <a href="#main" class="button scrolly" style="visibility: hidden">&nbsp;</a>
+                            </div>
+                        </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#Carousel"
                         data-bs-slide="prev">
