@@ -25,7 +25,6 @@
             async save(){
                 let configs = this.fieldset.store(),
                 request = await axios(configs)
-                console.log(request)
             }
         }
     }

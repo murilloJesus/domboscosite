@@ -50,7 +50,7 @@
     window.controller = {
         data: () => {
             return {
-                component: 'formulario'
+                component: 'tabela'
             }
         }
     }

@@ -1,5 +1,5 @@
 <template>
-    <tabela v-show="component == 'tabela'"></tabela>
+    <tabela v-show="component == 'tabela'" :controller="controller"></tabela>
     <formulario :fieldset="controller" v-show="component == 'formulario'">
         <div class="form-element-list">
             <div class="basic-tb-hd">
