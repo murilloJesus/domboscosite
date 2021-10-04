@@ -9,6 +9,7 @@ const NOME = 'Colégio Dom Bosco';
 function main () {
 
 	var	$window = $(window),
+        $document = $(document),
 		$body = $('body'),
 		$nav = $('#nav');
 
@@ -72,5 +73,7 @@ function main () {
 					target: $body,
 					visibleClass: 'navPanel-visible'
 				});
+
+         $("#Carousel").height($document.width()/2.289)
 
 }

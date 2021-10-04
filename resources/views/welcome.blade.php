@@ -78,25 +78,25 @@
                     </div> --}}
                     <div class="carousel-inner">
                         <div id="banner" class="carousel-item banner-1 active">
-                            <div class="content" style="visibility: hidden">
+                            {{-- <div class="content">
                                 <h2>O Melhor ensino para seu filho </h2>
                                 <p>Qualidade e cuidado deixe com a equipe do Colégio Múltiplo.</p>
-                                <a href="#main" class="button scrolly" style="visibility: hidden">&nbsp;</a>
-                            </div>
+                                <a href="#main" class="button scrolly">&nbsp;</a>
+                            </div> --}}
                         </div>
                         <div id="banner" class="carousel-item banner-2">
-                            <div class="content" style="visibility: hidden">
+                            {{-- <div class="content">
                                 <h2>O Melhor ensino para seu filho </h2>
                                 <p>Qualidade e cuidado deixe com a equipe do Colégio Múltiplo.</p>
-                                <a href="#main" class="button scrolly" style="visibility: hidden">&nbsp;</a>
-                            </div>
+                                <a href="#main" class="button scrolly">&nbsp;</a>
+                            </div> --}}
                         </div>
                         <div id="banner" class="carousel-item banner-3">
-                            <div class="content" style="visibility: hidden">
+                            {{-- <div class="content">
                                 <h2>O Melhor ensino para seu filho </h2>
                                 <p>Qualidade e cuidado deixe com a equipe do Colégio Múltiplo.</p>
-                                <a href="#main" class="button scrolly" style="visibility: hidden">&nbsp;</a>
-                            </div>
+                                <a href="#main" class="button scrolly">&nbsp;</a>
+                            </div> --}}
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#Carousel"
