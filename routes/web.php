@@ -2,6 +2,7 @@
 
 use App\Http\Middleware\RegisterAccess;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,10 +24,10 @@ Route::middleware([RegisterAccess::class])->prefix('vWVPSbUHIRJ')->group(functio
 Route::middleware(['auth:sanctum', 'verified'])->prefix('administrador')->group( function () {
 
     Route::get('/', function () {
-        return view('admin.home');
+        return view('admin.home')->with('page', 'home');
     });
 
     Route::get('/{pagina}', function ($pagina) {
-        return view("admin.$pagina");
+        return view("admin.$pagina")->with('page', $pagina);
     });
 });

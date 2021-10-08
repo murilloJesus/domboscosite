@@ -15,10 +15,10 @@ class CreateImages extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->text('name');
+            $table->text('name')->nullable();
             $table->text('source');
-            $table->text('alt');
-            $table->text('description');
+            $table->text('alt')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

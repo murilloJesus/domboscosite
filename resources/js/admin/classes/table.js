@@ -3,15 +3,35 @@ import { markRaw } from 'vue'
 
 class Table {
     constructor(fields){
-        this.coluns = []
+        this.columns = this.getColumns(fields)
+        this.no_order = this.getNoOrder(fields)
+    }
+
+    getColumns(fields) {
+        let columns = []
 
         Object.entries(fields).forEach((el) => {
-          this.coluns.push({
-              field: el[0],
-              name: el[1].name,
-              component: markRaw(this.prepare(el[1].component))
+            columns.push({
+                field: el[0],
+                name: el[1].name,
+                component: markRaw(this.prepare(el[1].component))
             })
         })
+
+        return columns
+    }
+
+    getNoOrder(fields){
+        let i = 0, no_order = []
+        Object.entries(fields).forEach((el) => {
+            if(el[1].no_order){
+                no_order.push(i)
+            }
+            i++
+        })
+        no_order.push(i)
+
+        return no_order
     }
 
     prepare(component){

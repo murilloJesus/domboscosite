@@ -1,5 +1,5 @@
 <?php
-
+use App\Models\Image;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,11 +15,11 @@ class CreateBanners extends Migration
     {
         Schema::create('banners', function (Blueprint $table) {
             $table->id();
-            $table->text('header');
-            $table->text('content');
-            $table->text('action');
-            $table->set('target', ['_blank', '_self']);
-            $table->text('image');
+            $table->text('header')->nullable();
+            $table->text('content')->nullable();
+            $table->text('action')->nullable();
+            $table->set('target', ['_blank', '_self'])->nullable();
+            $table->foreignIdFor(Image::class);
             $table->timestamps();
             $table->softDeletes();
         });

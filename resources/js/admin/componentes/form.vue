@@ -3,9 +3,23 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="form-actions button-icon-btn button-icon-btn-cl sm-res-mg-t-30">
-                    <button class="btn btn-gray gray-icon-notika btn-reco-mg btn-button-mg waves-effect"><i class="notika-icon notika-up-arrow"></i></button>
-                    <button class="btn btn-gray gray-icon-notika btn-reco-mg btn-button-mg waves-effect"><i class="notika-icon notika-close"></i></button>
-                    <button class="btn btn-success notika-btn-success waves-effect" @click="save"><i class="notika-icon notika-checked"></i></button>
+                    <button 
+                        @click="reset"
+                        data-toggle="tooltip" data-placement="top" title="" data-original-title="Resetar"
+                        class="btn btn-gray gray-icon-notika btn-reco-mg btn-button-mg waves-effect"  
+                    ><i class="notika-icon notika-close"></i></button>
+                    <button 
+                        v-show="hasUnsavedData" 
+                        @click="save"
+                        data-toggle="tooltip" data-placement="top" title="" data-original-title="Salvar"
+                        class="btn btn-gray gray-icon-notika btn-reco-mg btn-button-mg waves-effect"  
+                    ><i class="notika-icon notika-up-arrow"></i></button>
+                    <button 
+                        v-show="!(hasUnsavedData)" 
+                        @click="finish"
+                        data-toggle="tooltip" data-placement="top" title="" data-original-title="Finalizar"
+                        class="btn btn-success notika-btn-success waves-effect"  
+                    ><i class="notika-icon notika-checked"></i></button>
                 </div>
                 <slot></slot>
             </div>
@@ -14,19 +28,18 @@
 </template>
 
 <script>
-    import axios from 'axios'
 
     export default {
-        props: ['fieldset'],
-        methods:{
-            reset(){
-
-            },
-            async save(){
-                let configs = this.fieldset.store(),
-                request = await axios(configs)
+        props: ['controller'],
+        inject: ['save', 'reset', 'finish'],
+        mounted(){
+            window.$('[data-toggle="tooltip"]').tooltip();
+        },
+        computed: {
+            hasUnsavedData(){
+                return !(_.isEqual(this.controller.fieldset, this.controller.instance))
             }
-        }
+        },
     }
 
 </script>
@@ -38,4 +51,7 @@
         right: 30px;
     }
 
+    button {
+        margin-right: 10px;
+    }
 </style>

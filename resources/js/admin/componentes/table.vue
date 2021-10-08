@@ -4,10 +4,13 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="data-table-list">
                     <div class="table-responsive">
-                        <table id="data-table-basic" class="table table-striped">
+                        <table ref="tabela" class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th v-for="({name}, index) in controller.dataTable.coluns" :key="index">{{name}}</th>
+                                    <th v-for="({name}, index) in controller.dataTable.columns" :key="index">{{name}}</th>
+                                    <th class="actions">
+                                        Ações
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -15,7 +18,8 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th v-for="({name}, index) in controller.dataTable.coluns" :key="index">{{name}}</th>
+                                    <th v-for="({name}, index) in controller.dataTable.columns" :key="index">{{name}}</th>
+                                    <th class="actions">Ações</th>
                                 </tr>
                             </tfoot>
                         </table>
@@ -40,21 +44,73 @@ export default {
             required: true
         }
     },
-    data(){
+    data: () => {
         return {
-            rows: []
+            table: false
         }
     },
     async mounted(){
-        let res = await axios(this.controller.index())
-        this.rows = this.controller.getList(res.data)
-        this.$nextTick(() => {
-            window.$('#data-table-basic').DataTable();
-        })
+        await this.controller.getData()
+        this.initTable()
+    },
+    computed: {
+        rows(){
+            return this.controller.data
+        }
+    },
+    methods: {
+        initTable(){
+            this.$nextTick(() => {
+
+                this.table = window.$(this.$refs.tabela).DataTable({
+                    language: {
+                        decimal:        "",
+                        emptyTable:     "Nenhum resultado foi encontrado",
+                        info:           "Apresentando _START_ de _END_ ( _TOTAL_ totais)",
+                        infoEmpty:      "Apresentando 0 de 0.",
+                        infoFiltered:   "(filtrados do total de _MAX_)",
+                        infoPostFix:    "",
+                        thousands:      ",",
+                        lengthMenu:     "Mostrar _MENU_ por Página",
+                        loadingRecords: "Carregando...",
+                        processing:     "Processando...",
+                        search:         "Pesquisar:",
+                        zeroRecords:    "Nenhum resultado foi encontrado",
+                        paginate: {
+                            first:      "Primeira",
+                            last:       "Última",
+                            next:       "Próxima",
+                            previous:   "Anterior"
+                        },
+                        aria: {
+                            "sortAscending":  ": ative para organizar pela coluna",
+                            "sortDescending": ": ative para organizar pela coluna"
+                        }
+                    },
+                    columnDefs: [
+                        { orderable: false, targets: this.controller.dataTable.no_order }
+                    ],
+                    order: [],
+                    initComplete: () => {
+                        this.$nextTick(() => {
+                            window.$('[data-toggle="tooltip"]').tooltip();
+
+                            window.$('.i-checks').iCheck({
+                                    checkboxClass: 'icheckbox_square-green',
+                                    radioClass: 'iradio_square-green',
+                                });
+                        })
+                    }
+                });
+            })
+        }
     }
 }
 </script>
 
-<style>
-
+<style scoped>
+    .actions {
+        width: 130px;
+        text-align: center;
+    }
 </style>

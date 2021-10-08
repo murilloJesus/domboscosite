@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import { ref, watch } from '@vue/runtime-core'
 import axios from 'axios'
 import { normalize_url } from './../../composables/helper.js'
 
@@ -13,34 +12,31 @@ export default {
         field: {
             type: String,
             default: 'alias'
+        },
+        name: String,
+        page_id: [Number, null]
+    },
+    data: () => {
+        return {
+            path: ''
         }
     },
-    setup(props){
-
-        const path = ref(''),
-              page_id = ref(null)
-
-        async function getPath(id){
-           path.value = (await axios.get(`/api/pages/${id}`)).data.alias
+    watch: {
+        name: function() {
+            this.setField()
+        },
+        page_id: async function () {
+            await this.getPath(this.page_id)
+            this.setField()
+        },
+    },
+    methods: {
+        async getPath(id){
+           this.path = id ? (await axios.get(`/api/pages/${id}`)).data[this.field] : ''
+        },
+        setField(){
+            this.fieldset[this.field] = `${this.path}/${normalize_url(this.fieldset.name)}`
         }
-
-        function setField(){
-            props.fieldset[props.field] = `${path.value}/${normalize_url(props.fieldset.name)}`
-        }
-
-        watch(props.fieldset, async (newV) => {
-
-            if(page_id.value != newV.page_id){
-                page_id.value = newV.page_id
-                await  getPath(newV.page_id)
-            }
-
-            setField()
-        })
     }
 }
 </script>
-
-<style>
-
-</style>

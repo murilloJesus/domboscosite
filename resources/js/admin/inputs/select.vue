@@ -1,8 +1,8 @@
 <template>
     <div class="chosen-select-act fm-cmp-mg">
-        <select ref="select" class="chosen" data-placeholder="Escolha...">
+        <select ref="select" class="chosen" data-placeholder="Escolha..." v-model="fieldset[field]">
             <option value="">Selecione...</option>
-            <option v-for="(item, index) in lista" :value="item.id" :key="index">{{item.name}}</option>
+            <option v-for="(item, index) in filteredList" :value="item.id" :key="index">{{item.name}}</option>
         </select>
     </div>
 </template>
@@ -38,11 +38,16 @@ export default {
             this.lista = (await axios.get(this.resource)).data
         }
         window.$(this.$refs.select).on('change', () => {
-            this.fieldset[this.field] = $(this.$refs.select).val()
+            this.fieldset[this.field] = parseInt($(this.$refs.select).val())
         })
     },
     updated(){
         window.$(this.$refs.select).trigger("chosen:updated");
+    },
+    computed: {
+        filteredList(){
+            return this.resource ? this.lista.filter(el => el.id != this.fieldset.id) : this.lista
+        }
     }
 }
 </script>

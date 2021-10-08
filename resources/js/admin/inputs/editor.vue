@@ -11,11 +11,11 @@
 </template>
 
 <script>
-    import { v1 as uuidv1 } from 'uuid';
 
     export default {
         props: {
             fieldset: Object,
+            value: String,
             field: {
                 type: String,
                 default: "content"
@@ -23,7 +23,6 @@
         },
         data: () => {
             return {
-                uuid: uuidv1(),
                 status: false
             }
         },
@@ -40,6 +39,13 @@
 
                 this.fieldset[this.field] = $(this.$refs.editor).html()
                 this.status = false
+            }
+        },
+        watch: {
+            value: function(newV, oldV) {
+                if(newV !== oldV){
+                    $(this.$refs.editor).html( this.fieldset[this.field] )
+                }
             }
         }
     }

@@ -1,8 +1,10 @@
 import { createApp } from 'vue'
 
+var _ = require("lodash")
+
 import * as Pages from './admin/pages'
 
-const app = createApp({
+window.app = createApp({
     components: {
         ...Pages
     },
@@ -12,7 +14,7 @@ const app = createApp({
 const controller = createApp({
     data: () => {
         return {
-            app
+            app: window.app
         }
     },
     mounted(){

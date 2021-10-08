@@ -1,21 +1,20 @@
 import Api from './api.js'
 import Table from './table.js'
 
-class Pagina extends Api {
+class Banner extends Api {
     constructor() {
         super()
-        this.resources =  '/pages'
-        this.dataTable = this.getTable()
+        this.resources =  '/banners'
     }
 
     getObject(instance = {}){
         return {
             id: instance.id ? instance.id : false,
-            name: instance.name ? instance.name : '',
-            alias: instance.alias ? instance.alias : '/',
-            page_id: instance.page_id ? parseInt(instance.page_id) : null,
+            header: instance.header ? instance.header : '',
             content: instance.content ? instance.content : '',
-            times_accessed: instance.times_accessed ? instance.times_accessed : 0,
+            action: instance.action ? instance.action : '',
+            target: instance.target ? instance.target : '_self',
+            image: instance.image ? instance.image : '',
             created: instance.created_at ? instance.created_at : '',
             updated: instance.updated_at ? instance.updated_at : ''
         }
@@ -27,16 +26,16 @@ class Pagina extends Api {
                 name: '#',
                 component: 'text'
             },
-            name: {
-                name: 'Nome',
-                component: 'text'
+            image: {
+                name: 'Imagem',
+                component: 'imagem'
             },
-            alias: {
-                name: 'Caminho',
+            action: {
+                name: 'Url',
                 component: 'text'
             }
         })
     }
 }
 
-export default Pagina
+export default Banner
