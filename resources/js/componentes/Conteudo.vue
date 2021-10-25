@@ -23,7 +23,7 @@
                 class="paragraph">
                     {{text}}
                 </p>
-                <a href="#" class="button alt">Continue Lendo</a>
+                <!-- <a href="#" class="button alt">Continue Lendo</a> -->
             </article>
         </div>
     </div>
