@@ -1,26 +1,27 @@
 <template>
     <div class="col-9 col-12-medium">
         <div class="content">
-
             <!-- Content -->
             <article class="box post">
                 <header>
-                    <h3><a href="#">Ensino infantil</a></h3>
-                    <p>Estimular o desenvolvimento integral</p>
+                    <h3><a href="#">{{actived.name}}</a></h3>
+                    <p v-if="actived.desc">{{actived.desc}}</p>
                     <!-- <ul class="meta">
                         <li class="icon fa-clock">15 minutes ago</li>
                         <li class="icon fa-comments"><a href="#">8</a></li>
                     </ul> -->
                 </header>
-                <a href="#" class="image featured"><img src="/public/images/pic05.jpg" alt=""></a>
-                <p>
-                    A Educação Infantil do Colégio Dom Bosco busca incentivar nas crianças, por meio de brincadeiras e de interações, o gosto pela descoberta, além de valorizar suas experiências individuais e coletivas.
-                </p>
-                <p>
-                    Esta etapa de ensino tem como objetivo principal estimular o desenvolvimento integral das crianças de 0 a 5 anos, garantindo a cada uma o acesso aos processos de construção de conhecimentos e à aprendizagem de diferentes linguagens, bem como o direito às artes, à brincadeira, à convivência, à confiança, à cultura, à dignidade, à liberdade, à proteção, ao respeito, à saúde e à interação com outras crianças.
-                </p>
-                <p>
-                    O Sistema de Ensino Dom Bosco utilizado baseia-se nos documentos oficiais que norteiam esse segmento educacional no Brasil, principalmente na BNCC, na perspectiva teórico-metodológica sociointeracionista e no conceito pedagógico da interdisciplinaridade, além de confirmar a importância do brincar e da criatividade para o desenvolvimento infantil.
+                <a
+                    v-if="actived.source"
+                    :style="`background-image: url('${actived.source}')`"
+                    href="#"
+                    class="image featured parallax"
+                ></a>
+                <p
+                v-for="(text, t_index) in actived.text"
+                :key="t_index"
+                class="paragraph">
+                    {{text}}
                 </p>
                 <a href="#" class="button alt">Continue Lendo</a>
             </article>
@@ -36,29 +37,12 @@
             <section>
                 <h2 class="major"><span>Segmentos</span></h2>
                 <ul class="divided">
-                    <li>
-                        <article class="box post-summary">
-                            <h4><a class="active" href="javascript: void(0)">Ensino Infantil</a></h4>
-                        </article>
-                    </li>
-                    <li>
-                        <article class="box post-summary">
-                            <h4>Ensino Fundamental 1</h4>
-                        </article>
-                    </li>
-                    <li>
-                        <article class="box post-summary">
-                            <h4>Ensino Fundamental 2</h4>
-                        </article>
-                    </li>
-                    <li>
-                        <article class="box post-summary">
-                            <h4>Integral e Bílingue</h4>
-                        </article>
-                    </li>
-                    <li>
-                        <article class="box post-summary">
-                            <h4>Cursos Extracurriculares</h4>
+                    <li v-for="(item, index) in segmentos" :key="index">
+                        <article class="box post-summary" >
+                            <h4><a
+                                :class="actived.name == item.name ? 'active' : '' "
+                                @click="actived = item"
+                                href="javascript: void(0)">{{item.name}}</a></h4>
                         </article>
                     </li>
                 </ul>
@@ -70,11 +54,81 @@
 
 <script>
     export default {
-        name: "Content"
+        name: "Content",
+        data: () => {
+            return {
+                actived: {},
+                segmentos: [
+                    {
+                        name: "Ensino Infantil",
+                        desc: "Despertar, envolver, descobrir.",
+                        source: "/public/images/segmentos/segmento_infantil.png",
+                        text: [
+                            `A Educação Infantil é uma fase muito importante na formação do aluno. Brincar é a principal tarefa dos pequenos, pois é na brincadeira que descobrem o mundo à sua volta, comunicam-se e se conectam em um ambiente social.`,
+                            `O nosso Colégio tem um ambiente de  aprendizagem agradável para que seu filho possa desenvolver suas capacidades e estímulos imaginativos, além de ser acolhedor.`
+                        ]
+                    },
+                    {
+                        name: "Fundamental I",
+                        desc: "Autonomia, observação e desenvolver.",
+                        source: "/public/images/segmentos/segmento_fundamental_1.png",
+                        text: [
+                            `Nos Anos Iniciais do Ensino Fundamental (1º ao 5º ano), os estudantes aprendem usando a criatividade e a imaginação. Respeitar o tempo e as características de cada aluno é essencial.`,
+                            `Em nosso colégio aplicamos o trabalho em grupo, a solução colaborativa de situações-problema e a promoção da criatividade para, dessa forma, melhorar a capacidade de decisão e a capacidade de desenvolver saberes, considerando seu próprio cotidiano.`
+                        ]
+                    },
+                    {
+                        name: "Fundamental II",
+                        desc: "Independência, reflexão e raciocínio.",
+                        source: "/public/images/segmentos/segmento_fundamental_2.png",
+                        text: [
+                            `É no período dos Anos Finais em que os alunos passam por grandes mudanças físicas, emocionais e psicológicas.`,
+                            `Assim, para que o aprendizado seja significativo e divertido, oferecemos uma extensa variedade de gêneros textuais, distribuídos nas diversas disciplinas. Isso favorece o letramento no ambiente educativo. Com atividades que contemplam métodos para “aprender a aprender”, desenvolvendo a interdisciplinaridade, fortalecendo a qualidade do ensino e concretizando a aprendizagem como um ato de interação entre autor, professor, aluno, família e escola.`
+                        ]
+                    },
+                    {
+                        name: "Período Integral e Ensino Bilíngue",
+                        desc: false,
+                        source: false,
+                        text: [
+                            `Para ampliar a oportunidade de exposição das crianças à língua inglesa, o Período Integral e Bilíngue é a opção que mais se aproxima dos padrões internacionais.`,
+                            `O objetivo deste projeto é reduzir as lacunas na educação básica escolar brasileira no que diz respeito à língua inglesa, tornando-a um elemento de formação permanente para os nossos alunos.`
+                        ]
+                    },
+                    {
+                        name: "Cursos Extracurriculares",
+                        desc: false,
+                        source: false,
+                        text: [
+                            `O aluno podem frequentar os cursos extracurriculares de sua preferência no período inverso à aula, no qual desenvolvem suas capacidades e habilidades, com participação de professores capacitados.`,
+                            `As atividades extracurriculares visam produzir conhecimento que contribuam para o desenvolvimento social, cultural e artístico do aluno.`
+                        ]
+                    },
+
+                ]
+            }
+        },
+        created(){
+            this.actived = this.segmentos[0]
+        }
     }
 
 </script>
 
-<style>
+<style scoped>
+.parallax {
+    min-height: 250px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+.active {
+    color: #0a58ca;
+}
+
+.paragraph {
+    text-indent: 1em;
+}
 </style>

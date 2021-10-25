@@ -126,7 +126,7 @@
 							</div>
 
                             <!-- COLÉGIO -->
-                            <colegio></colegio>
+                            <conteudo></conteudo>
 
                             <!-- NOTICIAS -->
 							<div class="col-12">

@@ -7,18 +7,18 @@
                         <table ref="tabela" class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th v-for="({name}, index) in controller.dataTable.columns" :key="index">{{name}}</th>
+                                    <th v-for="(item, index) in controller.dataTable.columns" :key="index" :style="item.style">{{item.name}}</th>
                                     <th class="actions">
                                         Ações
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <row v-for="(item, index) in rows" :key="index" :data="item" :coluns="controller.dataTable.coluns"></row>
+                                <row v-for="(item, index) in rows" :key="index" :data="item" :columns="controller.dataTable.columns"></row>
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th v-for="({name}, index) in controller.dataTable.columns" :key="index">{{name}}</th>
+                                    <th v-for="(item, index) in controller.dataTable.columns" :key="index" :style="item.style">{{item.name}}</th>
                                     <th class="actions">Ações</th>
                                 </tr>
                             </tfoot>
@@ -31,7 +31,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 import Row from './row.vue'
 
 export default {

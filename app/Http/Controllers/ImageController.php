@@ -35,7 +35,23 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->post();
+
+        if ($request->hasFile('file')) {
+            if ($request->file('file')->isValid()) {
+                $ext = $request->file('file')->getClientOriginalExtension();
+                $name = $request->file('file')->getClientOriginalName();
+                $data['source'] = $request->file('file')->storeAs(
+                    'images',
+                    str_replacer(str_normalize(
+                        $request->name ?
+                        $request->name.".".$ext :
+                        $name))
+                );
+            }
+        }
+
+        return Image::create($data);
     }
 
     /**
@@ -46,7 +62,7 @@ class ImageController extends Controller
      */
     public function show(Image $image)
     {
-        //
+        return $image;
     }
 
     /**
@@ -69,7 +85,27 @@ class ImageController extends Controller
      */
     public function update(Request $request, Image $image)
     {
-        //
+        $data = $request->input();
+
+        return $data;
+
+        if ($request->hasFile('file')) {
+            if ($request->file('file')->isValid()) {
+                $ext = $request->file('file')->getClientOriginalExtension();
+                $name = $request->file('file')->getClientOriginalName();
+                $data['source'] = $request->file('file')->storeAs(
+                    'images',
+                    str_replacer(str_normalize(
+                        $request->name ?
+                        $request->name.".".$ext :
+                        $name))
+                );
+            }
+        }
+
+        if( $image->fill($data)->save() ){
+            return $image;
+        }
     }
 
     /**
@@ -80,6 +116,6 @@ class ImageController extends Controller
      */
     public function destroy(Image $image)
     {
-        //
+        return $image->delete();
     }
 }

@@ -14,6 +14,7 @@ class Table {
             columns.push({
                 field: el[0],
                 name: el[1].name,
+                style: el[1].style ? el[1].style : {},
                 component: markRaw(this.prepare(el[1].component))
             })
         })
@@ -38,6 +39,10 @@ class Table {
         switch (component) {
             case 'text':
                 return Output.Text
+                break;
+
+            case 'image_source':
+                return Output.ImageSource
                 break;
 
             default:

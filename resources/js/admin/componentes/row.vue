@@ -1,6 +1,6 @@
 <template>
     <tr>
-        <td v-for="(item, index) in coluns" :key="index">
+        <td v-for="(item, index) in columns" :key="index" :style="item.style ? item.style : {}">
             <component :is="item.component" :data="data[item.field]" ></component>
         </td>
         <td>
@@ -17,7 +17,7 @@
 export default {
     props: {
         data: Object,
-        coluns: Object
+        columns: Object
     },
     inject:['edit', 'destroy']
 }

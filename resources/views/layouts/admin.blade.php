@@ -495,6 +495,8 @@
     <script src="/public/admin/js/data-table/data-table-act.js"></script>
     <!-- main JS
 		============================================ -->
+    <script src="/public/admin/js/autosize.min.js"></script>
+
     <script src="/public/admin/js/main.js"></script>
 
     <script src="/public/js/class.admin.js"></script>

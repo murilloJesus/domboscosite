@@ -1,6 +1,6 @@
-import Tabela from './../componentes/table.vue'
-import Formulario from './../componentes/form.vue'
-import * as Inputs from './../inputs/index.js'
+import Tabela from '../componentes/table.vue'
+import Formulario from '../componentes/form.vue'
+import * as Inputs from '../input/index.js'
 
 export default {
     components: {
@@ -46,10 +46,10 @@ export default {
                     });
             },
             reset: () => {
-              this.controller.fieldset = this.controller.instance
+              this.controller.resetData()
             },
             finish: () => {
-                this.controller.fieldset = this.controller.getObject()
+                this.controller.finishData()
             }
         }
     }

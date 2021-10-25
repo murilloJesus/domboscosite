@@ -6,9 +6,11 @@ class Api {
     constructor(){
         this.route = '/api'
         this.resources = '/'
+        this.file_path = '/public'
         this.fieldset = this.getObject()
         this.instance = this.getObject()
-        this.dataTable = this.getTable()        
+        this.dataTable = this.getTable()
+        this.lastInstanceData = this.getObject()
         this.data = []
     }
 
@@ -40,6 +42,12 @@ class Api {
         })
     }
 
+    getFieldset() {
+        let formData = new FormData()
+        Object.keys(this.fieldset).forEach(key => formData.append(key, this.fieldset[key]));
+        return formData
+    }
+
     // PATH's
     index(){
         return {
@@ -59,7 +67,7 @@ class Api {
         return {
             method: 'post',
             url: `${this.route}${this.resources}`,
-            data: this.fieldset
+            data: this.getFieldset()
         }
     }
 
@@ -67,7 +75,7 @@ class Api {
         return {
             method: 'put',
             url: `${this.route}${this.resources}/${id}`,
-            data: this.fieldset
+            data: this.getFieldset()
         }
     }
 
@@ -87,6 +95,7 @@ class Api {
     async getInstance(id){
         let res = await axios(this.show(id))
 
+        this.lastInstanceData = res.data
         this.fieldset = reactive(this.getObject(Object.assign(res.data)))
         this.instance = reactive(this.getObject(Object.assign(res.data)))
     }
@@ -100,11 +109,20 @@ class Api {
         }
 
         if(res) {
-            this.getInstance(id)
+            this.instance = res.data
         }
 
         return res
     }
+
+    resetData(){
+        this.fieldset = reactive(this.getObject(Object.assign(this.lastInstanceData)))
+    }
+
+    finishData(){
+        this.fieldset = reactive(this.getObject())
+    }
+
 
     async sendDestroy(id){
         let res = await axios(this.destroy(id))

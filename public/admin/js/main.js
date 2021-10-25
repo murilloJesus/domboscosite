@@ -8,7 +8,7 @@ function main() {
            /*--------------------------
             auto-size Active Class
            ---------------------------- */
-           $(".auto-size")[0] && autosize($(".auto-size"));
+        //    $(".auto-size")[0] && autosize($(".auto-size"));
            /*--------------------------
             Collapse Accordion Active Class
            ---------------------------- */
