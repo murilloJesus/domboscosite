@@ -15,12 +15,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware([RegisterAccess::class])->prefix('vWVPSbUHIRJ')->group(function (){
-    Route::get('/', function () {
-        return view('welcome');
-    });
-});
-
 Route::middleware(['auth:sanctum', 'verified'])->prefix('administrador')->group( function () {
 
     Route::get('/', function () {
@@ -31,3 +25,22 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('administrador')->group(
         return view("admin.$pagina")->with('page', $pagina);
     });
 });
+
+Route::get('/', function () {
+    return view('home');
+});
+
+Route::get('/proposta-pedagogica', function () {
+    return view('proposta_pedagogica');
+});
+
+Route::get('/segmentos', function () {
+    return view('segmentos');
+});
+
+
+Route::get('/galerias', function () {
+    return view('galerias');
+});
+
+

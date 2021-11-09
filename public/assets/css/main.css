@@ -2322,7 +2322,7 @@ input, select, textarea {
 		#header .logo {
 			position: relative;
 			text-align: center;
-			border-top: solid 5px #e7eae8;
+			border-top: solid 5px #7a72bd;
 			top: 0.65em;
 		}
 
@@ -2340,7 +2340,7 @@ input, select, textarea {
 
 			#header .logo p {
 				display: inline;
-				color: #C1CAC5;
+				color: #152445;
 			}
 
 /* Nav */
@@ -3137,4 +3137,11 @@ input, select, textarea {
 
     .carousel-inner{
         height: 100%;
+    }
+
+    .image-content {
+        min-height: 250px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }

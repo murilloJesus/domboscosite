@@ -1,6 +1,29 @@
 <template>
+
+    <div class="col-3 col-12-medium sidebar-mobile">
+        <div class="sidebar">
+
+            <!-- Sidebar -->
+
+            <!-- Recent Posts -->
+            <section>
+                <h2 class="major"><span>Segmentos</span></h2>
+                <ul class="divided">
+                    <li v-for="(item, index) in segmentos" :key="index">
+                        <article class="box post-summary" >
+                            <h4><a
+                                :class="actived.name == item.name ? 'active' : '' "
+                                @click="set_actived(item)"
+                                href="javascript: void(0)">{{item.name}}</a></h4>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
     <div class="col-9 col-12-medium">
-        <div class="content">
+        <div class="content" ref="content">
             <!-- Content -->
             <article class="box post">
                 <header>
@@ -28,7 +51,7 @@
         </div>
     </div>
 
-    <div class="col-3 col-12-medium">
+    <div class="col-3 col-12-medium sidebar-web">
         <div class="sidebar">
 
             <!-- Sidebar -->
@@ -41,7 +64,7 @@
                         <article class="box post-summary" >
                             <h4><a
                                 :class="actived.name == item.name ? 'active' : '' "
-                                @click="actived = item"
+                                @click="set_actived(item)"
                                 href="javascript: void(0)">{{item.name}}</a></h4>
                         </article>
                     </li>
@@ -110,6 +133,14 @@
         },
         created(){
             this.actived = this.segmentos[0]
+        },
+        methods: {
+            set_actived(item){
+                this.actived = item;
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $(this.$refs.content).offset().top - this.size_of_menu()
+                }, 2000);
+            }
         }
     }
 
@@ -130,5 +161,33 @@
 
 .paragraph {
     text-indent: 1em;
+    font-size: 1.3em;
+}
+
+.sidebar-mobile {
+    display: none;
+}
+
+
+.sidebar-web {
+    display: block;
+}
+
+@media screen and (max-width: 980px) {
+
+    .sidebar-mobile {
+        display: block;
+    }
+
+    .sidebar-web {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 736px) {
+    .text {
+        font-size: 1.1em;
+    }
 }
 </style>
