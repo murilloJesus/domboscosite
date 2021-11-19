@@ -2,12 +2,9 @@
 
     <div class="col-3 col-12-medium">
         <div class="sidebar">
-
-            <!-- Sidebar -->
-
             <!-- Recent Posts -->
             <section>
-                <h2 class="major"><span>Colegio</span></h2>
+                <h2 class="major"><span>Colégio</span></h2>
                 <ul class="divided">
                     <li v-for="(item, index) in segmentos" :key="index">
                         <article class="box post-summary" >
@@ -46,7 +43,7 @@
                 class="paragraph">
                     {{text}}
                 </p>
-                <!-- <a href="#" class="button alt">Continue Lendo</a> -->
+                <a :href="actived.see_more" v-if="actived.see_more" class="button alt">Continue Lendo</a>
             </article>
         </div>
     </div>
@@ -62,30 +59,45 @@
                 segmentos: [
                     {
                         name: "História",
-                        desc: "Despertar, envolver, descobrir.",
+                        desc: false,
                         source: "/public/images/historia/historia.jpeg",
                         text: [
-                            `A Educação Infantil é uma fase muito importante na formação do aluno. Brincar é a principal tarefa dos pequenos, pois é na brincadeira que descobrem o mundo à sua volta, comunicam-se e se conectam em um ambiente social.`,
-                            `O nosso Colégio tem um ambiente de  aprendizagem agradável para que seu filho possa desenvolver suas capacidades e estímulos imaginativos, além de ser acolhedor.`
-                        ]
+                            `O Colégio DOM BOSCO nasce em 2009 com a denominação “Múltiplo Educação Infantil”, atendendo ao segmento da Educação Infantil, tendo o afeto e a educação humanizada como principais pilares em sua prática, conquistando uma ascensão constante e surpreendente, o que nada mais foi do que o resultado e um excelente trabalho desenvolvido.`,
+                            ],
+                        see_more: "/colegio#historia"
                     },
                     {
-                        name: "Missão, Visão, Valores",
-                        desc: "Autonomia, observação e desenvolver.",
-                        source: "/public/images/historia/missao.png",
+                        name: "Missão, Visão e Valores",
+                        desc: false,
+                        source: false,
                         text: [
-                            `Nos Anos Iniciais do Ensino Fundamental (1º ao 5º ano), os estudantes aprendem usando a criatividade e a imaginação. Respeitar o tempo e as características de cada aluno é essencial.`,
-                            `Em nosso colégio aplicamos o trabalho em grupo, a solução colaborativa de situações-problema e a promoção da criatividade para, dessa forma, melhorar a capacidade de decisão e a capacidade de desenvolver saberes, considerando seu próprio cotidiano.`
+                            `VISÃO: Ser uma instituição educacional de referência, promovendo a excelência humana e acadêmica de uma sociedade.`,
+                            `MISSÃO: Através de uma educação de qualidade, íntegra e inovadora,  promover a formação de cidadãos autônomos, criativos, cooperativos, resilientes e com competência para gerar transformações sociais, tecnológicas e ecológicas.`,
+                            `VALORES:
+                                Respeito
+                                Comprometimento
+                                Pertencimento
+                                Empatia
+                                Criatividade
+                                `
                         ]
                     },
                     {
-                        name: "Proposta Pedagogica",
-                        desc: "Independência, reflexão e raciocínio.",
+                        name: "Premiações",
+                        desc: false,
+                        source: "/public/images/historia/missao.jpeg",
+                        text: [
+                        ]
+                    },
+                    {
+                        name: "Proposta Pedagógica",
+                        desc: "Educação Infantil.",
                         source: "/public/images/historia/proposta-pedagogica.webp",
                         text: [
-                            `É no período dos Anos Finais em que os alunos passam por grandes mudanças físicas, emocionais e psicológicas.`,
-                            `Assim, para que o aprendizado seja significativo e divertido, oferecemos uma extensa variedade de gêneros textuais, distribuídos nas diversas disciplinas. Isso favorece o letramento no ambiente educativo. Com atividades que contemplam métodos para “aprender a aprender”, desenvolvendo a interdisciplinaridade, fortalecendo a qualidade do ensino e concretizando a aprendizagem como um ato de interação entre autor, professor, aluno, família e escola.`
-                        ]
+                            `A Educação Infantil do Colégio Dom Bosco busca incentivar nas crianças, por meio de brincadeiras e de interações, o gosto pela descoberta, além de valorizar suas experiências individuais e coletivas.`,
+                            `Esta etapa de ensino tem como objetivo principal estimular o desenvolvimento integral das crianças de 0 a 5 anos, garantindo a cada uma o acesso aos processos de construção de conhecimentos e à aprendizagem de diferentes linguagens, bem como o direito às artes, à brincadeira, à convivência, à confiança, à cultura, à dignidade, à liberdade, à proteção, ao respeito, à saúde e à interação com outras crianças.`
+                        ],
+                        see_more: "/proposta-pedagogica"
                     },
                     {
                         name: "Infraestrutura",

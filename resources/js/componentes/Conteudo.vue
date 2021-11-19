@@ -2,9 +2,6 @@
 
     <div class="col-3 col-12-medium sidebar-mobile">
         <div class="sidebar">
-
-            <!-- Sidebar -->
-
             <!-- Recent Posts -->
             <section>
                 <h2 class="major"><span>Segmentos</span></h2>
@@ -19,7 +16,6 @@
                     </li>
                 </ul>
             </section>
-
         </div>
     </div>
     <div class="col-9 col-12-medium">
@@ -147,9 +143,11 @@
 </script>
 
 <style scoped>
+
 .parallax {
     min-height: 250px;
-    background-attachment: fixed;
+    /* retirado a funcionalidade de parallar */
+    /* background-attachment: fixed; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

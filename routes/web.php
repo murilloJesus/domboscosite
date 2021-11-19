@@ -27,20 +27,25 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('administrador')->group(
 });
 
 Route::get('/', function () {
-    return view('home');
+    return view('pages.home');
 });
 
 Route::get('/proposta-pedagogica', function () {
-    return view('proposta_pedagogica');
+    return view('pages.proposta_pedagogica');
 });
 
 Route::get('/segmentos', function () {
-    return view('segmentos');
+    return view('pages.segmentos');
+});
+
+Route::get('/contato', function () {
+    return view('pages.contato');
 });
 
 
+
 Route::get('/galerias', function () {
-    return view('galerias');
+    return view('pages.galerias');
 });
 
 

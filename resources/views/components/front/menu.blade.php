@@ -15,15 +15,15 @@
                                     <li><a href="#">Material Didático</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Infraestrutura</a></li>
+                            <li><a href="#">Estrutura</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="/segmentos">Segmentos</a>
                         <ul>
                             <li><a href="/segmentos#ensino-infantil">Ensino Infantil</a></li>
-                            <li><a href="/segmentos#ensino-fundamental-1">Ensino Fundamental 1</a></li>
-                            <li><a href="/segmentos#ensino-fundamental-2">Ensino Fundamental 2</a></li>
+                            <li><a href="/segmentos#ensino-fundamental-1">Ensino Fundamental I</a></li>
+                            <li><a href="/segmentos#ensino-fundamental-2">Ensino Fundamental II</a></li>
                             <li><a href="/segmentos#integral-e-bilingue">Integral e Bílingue</a></li>
                             <li><a href="/segmentos#extracurriculares">Cursos Extracurriculares</a>
                                 <ul>
@@ -35,8 +35,8 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="#">Notícias</a></li>
-                    <li><a href="galerias">Galerias</a></li>
-                    <li><a href="#">Contato</a></li>
+                    {{-- <li><a href="#">Notícias</a></li> --}}
+                    <li><a href="#galerias">Galerias</a></li>
+                    <li><a href="/contato">Contato</a></li>
                 </ul>
             </nav>
