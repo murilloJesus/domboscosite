@@ -42,7 +42,13 @@ Route::get('/contato', function () {
     return view('pages.contato');
 });
 
+Route::get('/colegio', function () {
+    return view('pages.colegio');
+});
 
+Route::get('/estrutura', function () {
+    return view('pages.estrutura');
+});
 
 Route::get('/galerias', function () {
     return view('pages.galerias');

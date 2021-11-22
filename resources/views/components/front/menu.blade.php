@@ -3,10 +3,10 @@
                 <ul>
                     <li class="current"><a href="/">Home</a></li>
                     <li>
-                        <a href="#" class="active">Colégio</a>
+                        <a href="/colegio" class="active">Colégio</a>
                         <ul>
-                            <li><a href="#">História</a></li>
-                            <li><a href="#">Missão, Visão e Valores</a></li>
+                            <li><a href="/colegio#historia">História</a></li>
+                            <li><a href="/colegio#missao-visão-valores">Missão, Visão e Valores</a></li>
                             <li>
                                 <a href="/proposta-pedagogica" class="active">Proposta Pedagógica</a>
                                 <ul>
@@ -15,7 +15,7 @@
                                     <li><a href="#">Material Didático</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Estrutura</a></li>
+                            <li><a href="/colegio#estrutura">Estrutura</a></li>
                         </ul>
                     </li>
                     <li>
@@ -36,7 +36,7 @@
                         </ul>
                     </li>
                     {{-- <li><a href="#">Notícias</a></li> --}}
-                    <li><a href="#galerias">Galerias</a></li>
+                    <li><a href="/galerias">Galerias</a></li>
                     <li><a href="/contato">Contato</a></li>
                 </ul>
             </nav>

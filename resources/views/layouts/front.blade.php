@@ -46,7 +46,7 @@
             <li><a class="icon brands fa-linkedin-in" target="_blank" href="https://www.linkedin.com/company/colegiodombosco/"><span class="label">LinkedIn</span></a></li>
         </ul>
 
-        <a href="https://api.whatsapp.com/send?phone=&amp;text=" target="_blank"><img class="whatsapp" src="/public/images/contatowhats.png"></a>
+        <a href="https://api.whatsapp.com/send?phone=5515974025810&amp;text=" target="_blank"><img class="whatsapp" src="/public/images/contatowhats.png"></a>
 
         <div class="alert text-center cookiealert" role="alert">
             <b>Você conhece os cookies?</b> &#x1F36A; Nós utilizamos os cookies para garantir uma melhor experiência em nosso site. <a href="https://cookiesandyou.com/" target="_blank">Saiba mais aqui</a>

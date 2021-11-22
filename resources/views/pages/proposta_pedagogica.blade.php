@@ -10,7 +10,6 @@
             </div>
         </header>
 
-
         <!-- Main -->
         <section id="proposta-pedagogica">
             <div class="container">
@@ -91,13 +90,6 @@
                                 </article>
 
                         </div>
-                    </div>
-                    <div class="col-12">
-
-                        {{-- ULTIMAS NOTICIAS --}}
-
-                        {{-- <x-front.news></x-front.news> --}}
-
                     </div>
                 </div>
             </div>
