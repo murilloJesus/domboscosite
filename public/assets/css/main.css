@@ -3012,8 +3012,6 @@ input, select, textarea {
                 z-index: 1000;
                 top: 0px;
                 padding-top: 5px;
-                display: flex;
-                flex-direction: column;
             }
 
             ul.contact li {
@@ -3037,7 +3035,7 @@ input, select, textarea {
 			}
 
 				h2.major {
-					font-size: 1.25em;
+					font-size: 1.65em;
 					margin: 0 0 2em 0;
 				}
 
@@ -3167,6 +3165,12 @@ input, select, textarea {
 				padding-left: 0;
 				line-height: 1.75em;
 			}
+
+
+            ul.contact {
+                display: flex;
+                flex-direction: column;
+            }
 
 	}
 
