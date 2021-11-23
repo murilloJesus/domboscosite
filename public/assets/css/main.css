@@ -3274,6 +3274,10 @@ input, select, textarea {
             margin-bottom: 10px;
         }
 
+        .site-map a {
+            font-size: 17px;
+        }
+
     }
 
     @media (min-width:992px) {
