@@ -3254,6 +3254,10 @@ input, select, textarea {
         .image-content-home {
             background-position-y: 0px;
         }
+
+        .site-map a {
+            font-size: 11px;
+        }
     }
 
     @media (min-width:576px) {
