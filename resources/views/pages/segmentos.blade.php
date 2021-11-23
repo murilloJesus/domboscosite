@@ -19,6 +19,8 @@
 
                             <article class="box page-content">
 
+                                <div id="infantil" class="anchoring"></div>
+
                                 <header>
                                     <h3>Ensino Infantil</h3>
                                     <p>Despertar, envolver, descobrir.</p>
@@ -38,6 +40,8 @@
                                         O nosso Colégio tem um ambiente de  aprendizagem agradável para que seu filho possa desenvolver suas capacidades e estímulos imaginativos, além de ser acolhedor.
                                     </p>
                                 </section>
+
+                                <div id="fundamental-I" class="anchoring"></div>
 
                                 <header>
                                     <h3>Fundamental I</h3>
@@ -59,6 +63,8 @@
                                     </p>
                                 </section>
 
+                                <div id="fundamental-II" class="anchoring"></div>
+
                                 <header>
                                     <h3>Fundamental II</h3>
                                     <p>Independência, reflexão e raciocínio.</p>
@@ -79,6 +85,8 @@
                                     </p>
                                 </section>
 
+                                <div id="integral-e-bilingue" class="anchoring"></div>
+
                                 <header>
                                     <h3>Período Integral e Ensino Bilíngue</h3>
                                     {{-- <p>False.</p> --}}
@@ -98,6 +106,8 @@
                                         O objetivo deste projeto é reduzir as lacunas na educação básica escolar brasileira no que diz respeito à língua inglesa, tornando-a um elemento de formação permanente para os nossos alunos.
                                     </p>
                                 </section>
+
+                                <div id="extracurriculares" class="anchoring"></div>
 
                                 <header>
                                     <h3>Cursos Extracurriculares</h3>

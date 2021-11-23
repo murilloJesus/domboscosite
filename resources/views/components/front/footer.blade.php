@@ -8,18 +8,29 @@
                                 <div class="col-8 col-12-medium">
                                     <h2 class="major text-start"><span>Mapa do site</span></h2>
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <p><a href="/">Home</a></p>
-                                            <p><a href="/">História</a></p>
-                                            <p><a href="/">Missão, Visão e Valores</a></p>
-                                            <p><a href="/">Proposta Pedagógica</a></p>
-                                            <p><a href="/">Estrutura</a></p>
-                                            <p><a href="/">Segmentos</a></p>
-                                            <p><a href="/">Galeria</a></p>
-                                            <p><a href="/">Contato</a></p>
+                                        <div class="col-6 col-12-medium">
+                                            <div class="site-map">
+                                                <a href="/" class="first-level">Home</a>
+                                                <a href="/colegio" class="first-level">Colégio</a>
+                                                    <a href="/colegio#historia" class="second-level">História</a>
+                                                    <a href="/colegio#missao-visao-valores" class="second-level">Missão, Visão e Valores</a>
+                                                    <a href="/proposta-pedagogica" class="second-level">Proposta Pedagógica</a>
+                                                        <a href="/proposta-pedadogica#infantil" class="third-level">Infantil</a>
+                                                        <a href="/proposta-pedadogica#fundamental" class="third-level">Fundamental</a>
+                                                    <a href="/colegio#estrutura" class="second-level">Estrutura</a>
+                                            </div>
                                         </div>
-                                        <div class="col-md-6">
-
+                                        <div class="col-6 col-12-medium">
+                                            <div class="site-map">
+                                                <a href="/segmentos" class="first-level">Segmentos</a>
+                                                    <a href="/segmentos#infantil" class="second-level">Ensino Infantil</a>
+                                                    <a href="/segmentos#fundamental-I" class="second-level">Ensino Fundamental I</a>
+                                                    <a href="/segmentos#fundamental-II" class="second-level">Ensino Fundamental II</a>
+                                                    <a href="/segmentos#integral-e-bilingue" class="second-level">Integral e Bilíngue</a>
+                                                    <a href="/segmentos#extracurriculares" class="second-level">Extracurriculares</a>
+                                                <a href="/galerias" class="first-level">Galeria</a>
+                                                <a href="/contato" class="first-level">Contato</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

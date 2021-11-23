@@ -19,6 +19,7 @@
                     <!-- Content -->
                     <article class="box page-content">
 
+                        <div id="historia" class="anchoring"></div>
                         <header>
                             <h3>História</h3>
                         </header>
@@ -71,6 +72,7 @@
                             </p>
                         </section>
 
+                        <div id="missao-visao-valores" class="anchoring"></div>
                         <header>
                             <h3>Missão, Visão e Valores</h3>
                         </header>
@@ -113,6 +115,7 @@
                             </p>
                         </section>
 
+                        <div id="estrutura" class="anchoring"></div>
                         <estrutura></estrutura>
 
                     </article>

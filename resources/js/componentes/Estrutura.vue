@@ -1,5 +1,4 @@
 <template>
-
     <article class="box post">
         <header>
             <h3><a href="#">Estruturas</a></h3>
@@ -17,9 +16,7 @@
 
             <div class="mySlides">
                 <div class="numbertext">{{img_index + 1}} / {{paginator.total_images}}</div>
-                <div class="image-gallery" :style="`background-image: url('${path}/${selected.src}')`">
-
-                </div>
+                <div class="image-gallery" :style="`background-image: url('${path}/${selected.src}')`"></div>
             </div>
 
             <a class="prev" @click="move(-1)">❮</a>
@@ -30,7 +27,7 @@
             </div>
 
             <div class="row">
-                <div class="column" v-for="(item, index) in images" :key="index" @click="img_index = index">
+                <div class="column" v-for="(item, index) in images" :key="index" @click="img_index = paginator.index_atual+index">
                     <img class="demo cursor" :class="img_index == paginator.index_atual+index ? 'active' : ''"
                         :src="`${path}/${item.src}`" style="width:100%" :alt="item.name">
                 </div>
@@ -42,13 +39,15 @@
 
 <script>
     import infraestrutura from './../data/galery/infraestrutura.json'
+    import $ from 'jquery'
 
     export default {
-        name: "Galeria",
+        name: "Estrutura",
         data: () => {
+
             return {
                 img_index: 0,
-                size_of_galery: 6,
+                size_of_galery: $(document).width() > 980 ? 6 : 4,
                 galeries: [
                     infraestrutura
                 ]
@@ -184,6 +183,7 @@
     .caption-container p {
         margin-bottom: 5px;
         text-align: center !important;
+        text-indent: 0em !important;
     }
 
     .row:after {
@@ -207,6 +207,12 @@
     .demo:hover {
         opacity: 1;
         border: 2px solid #F71;
+    }
+
+    @media screen and (max-width: 980px) {
+        .column{
+            width: 25%;
+        }
     }
 
 </style>

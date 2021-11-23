@@ -10,28 +10,30 @@
     </div>
 </header>
 
-<section>
+<section id="contato">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="content">
-
                     <form>
-                        <div class="fields">
-                            <div class="field half">
-                                <input type="text" name="name" id="name" placeholder="Name">
+                        <div class="fields row">
+                            <div class="field col-6 col-12-medium">
+                                <label for="name">Nome</label>
+                                <input type="text" name="name" id="name" placeholder="Nome">
                             </div>
-                            <div class="field half">
+                            <div class="field col-6 col-12-medium">
+                                <label for="email">Email</label>
                                 <input type="email" name="email" id="email" placeholder="Email">
                             </div>
-                            <div class="field">
-                                <textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
+                            <div class="field col-12">
+                                <label for="message">Mensagem</label>
+                                <textarea name="message" id="message" placeholder="Mensagem" rows="7"></textarea>
                             </div>
                         </div>
-                        <ul class="actions">
-                            <li><input type="submit" value="Send Message" class="button primary"></li>
-                        </ul>
-                    </form>
+                        <div class="actions">
+                            <input type="submit" value="Enviar mensagem" class="button alt">
+                        </div>
+                        </form>
                 </div>
             </div>
         </div>

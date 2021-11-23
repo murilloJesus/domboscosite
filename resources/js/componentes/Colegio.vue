@@ -11,7 +11,7 @@
                             <h4><a
                                 :class="actived.name == item.name ? 'active' : '' "
                                 @click="set_actived(item)"
-                                href="javascript: void(0)">{{item.name}}</a></h4>
+                                :href="`#${item.href}`">{{item.name}}</a></h4>
                         </article>
                     </li>
                 </ul>
@@ -22,7 +22,11 @@
     <div class="col-9 col-12-medium">
         <div class="content" ref="content">
             <!-- Content -->
-            <article class="box post">
+            <div :id="actived.href" class="anchoring"></div>
+            <component v-if="actived.component" :is="actived.component">
+
+            </component>
+            <article v-else class="box post">
                 <header>
                     <h3><a href="#">{{actived.name}}</a></h3>
                     <p v-if="actived.desc">{{actived.desc}}</p>
@@ -32,17 +36,17 @@
                     </ul> -->
                 </header>
                 <a
-                    v-if="actived.source"
-                    :style="`background-image: url('${actived.source}')`"
+                    v-if="actived.classImage"
                     href="#"
+                    :class="actived.classImage"
                     class="image featured parallax"
                 ></a>
                 <p
                 v-for="(text, t_index) in actived.text"
                 :key="t_index"
-                class="paragraph">
-                    {{text}}
-                </p>
+                v-html="text"
+                class="paragraph"
+                ></p>
                 <a :href="actived.see_more" v-if="actived.see_more" class="button alt">Continue Lendo</a>
             </article>
         </div>
@@ -51,6 +55,7 @@
 </template>
 
 <script>
+import EstruturaVue from './Estrutura.vue';
     export default {
         name: "Content",
         data: () => {
@@ -60,7 +65,8 @@
                     {
                         name: "História",
                         desc: false,
-                        source: "/public/images/historia/historia.jpeg",
+                        href: 'historia',
+                        classImage: "image-historia",
                         text: [
                             `O Colégio DOM BOSCO nasce em 2009 com a denominação “Múltiplo Educação Infantil”, atendendo ao segmento da Educação Infantil, tendo o afeto e a educação humanizada como principais pilares em sua prática, conquistando uma ascensão constante e surpreendente, o que nada mais foi do que o resultado e um excelente trabalho desenvolvido.`,
                             ],
@@ -69,44 +75,45 @@
                     {
                         name: "Missão, Visão e Valores",
                         desc: false,
-                        source: false,
+                        href: 'missao-visao-valores',
+                        classImage: 'image-missao-visao-valores',
                         text: [
-                            `VISÃO: Ser uma instituição educacional de referência, promovendo a excelência humana e acadêmica de uma sociedade.`,
-                            `MISSÃO: Através de uma educação de qualidade, íntegra e inovadora,  promover a formação de cidadãos autônomos, criativos, cooperativos, resilientes e com competência para gerar transformações sociais, tecnológicas e ecológicas.`,
-                            `VALORES:
-                                Respeito
-                                Comprometimento
-                                Pertencimento
-                                Empatia
-                                Criatividade
+                            `<b>VISÃO</b> Ser uma instituição educacional de referência, promovendo a excelência humana e acadêmica de uma sociedade.`,
+                            `<b>MISSÃO</b> Através de uma educação de qualidade, íntegra e inovadora,  promover a formação de cidadãos autônomos, criativos, cooperativos, resilientes e com competência para gerar transformações sociais, tecnológicas e ecológicas.`,
+                            `<b>VALORES</b>
+                                Respeito,
+                                Comprometimento,
+                                Pertencimento,
+                                Empatia,
+                                Criatividade.
                                 `
                         ]
                     },
                     {
                         name: "Premiações",
                         desc: false,
-                        source: "/public/images/historia/missao.jpeg",
+                        href: 'premiacoes',
+                        classImage: "image-missao-visao-valores",
                         text: [
                         ]
                     },
                     {
                         name: "Proposta Pedagógica",
-                        desc: "Educação Infantil.",
-                        source: "/public/images/historia/proposta-pedagogica.webp",
+                        desc: "Educação Infantil",
+                        href: 'proposta-pedagogica-infantil',
+                        classImage: "image-educacao-infantil",
                         text: [
                             `A Educação Infantil do Colégio Dom Bosco busca incentivar nas crianças, por meio de brincadeiras e de interações, o gosto pela descoberta, além de valorizar suas experiências individuais e coletivas.`,
-                            `Esta etapa de ensino tem como objetivo principal estimular o desenvolvimento integral das crianças de 0 a 5 anos, garantindo a cada uma o acesso aos processos de construção de conhecimentos e à aprendizagem de diferentes linguagens, bem como o direito às artes, à brincadeira, à convivência, à confiança, à cultura, à dignidade, à liberdade, à proteção, ao respeito, à saúde e à interação com outras crianças.`
                         ],
                         see_more: "/proposta-pedagogica"
                     },
                     {
-                        name: "Infraestrutura",
+                        name: "Estrutura",
+                        href: 'estrutura',
                         desc: false,
                         source: false,
-                        text: [
-                            `Para ampliar a oportunidade de exposição das crianças à língua inglesa, o Período Integral e Bilíngue é a opção que mais se aproxima dos padrões internacionais.`,
-                            `O objetivo deste projeto é reduzir as lacunas na educação básica escolar brasileira no que diz respeito à língua inglesa, tornando-a um elemento de formação permanente para os nossos alunos.`
-                        ]
+                        text: false,
+                        component: EstruturaVue
                     }
                 ]
             }
@@ -117,9 +124,9 @@
         methods: {
             set_actived(item){
                 this.actived = item;
-                $([document.documentElement, document.body]).animate({
-                    scrollTop: $(this.$refs.content).offset().top - this.size_of_menu()
-                }, 2000);
+                // $([document.documentElement, document.body]).animate({
+                //     scrollTop: $(this.$refs.content).offset().top - this.size_of_menu()
+                // }, 2000);
             }
         }
     }
@@ -129,7 +136,7 @@
 <style scoped>
 .parallax {
     min-height: 250px;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -142,6 +149,7 @@
 .paragraph {
     text-indent: 1em;
     font-size: 1.3em;
+    text-align: justify;
 }
 
 @media screen and (max-width: 736px) {

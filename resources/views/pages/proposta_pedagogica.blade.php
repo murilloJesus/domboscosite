@@ -21,6 +21,8 @@
 
                                 <article class="box page-content">
 
+                                    <div id="infantil" class="anchoring"></div>
+
                                     <header>
                                         <h3>Educação Infantil</h3>
                                     </header>
@@ -41,6 +43,8 @@
                                             O Sistema de Ensino Dom Bosco utilizado baseia-se nos documentos oficiais que norteiam esse segmento educacional no Brasil, principalmente na BNCC, na perspectiva teórico-metodológica sociointeracionista e no conceito pedagógico da interdisciplinaridade, além de confirmar a importância do brincar e da criatividade para o desenvolvimento infantil.
                                         </p>
                                     </section>
+
+                                    <div id="fundamental" class="anchoring"></div>
 
                                     <header>
                                         <h3>Educação Fundamental</h3>
