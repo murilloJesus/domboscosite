@@ -19505,6 +19505,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Depoimentos",
   data: function data() {
@@ -19526,7 +19529,9 @@ __webpack_require__.r(__webpack_exports__);
         source: "/public/images/depoimentos/depoimentos_3.png",
         name: "Luciana Portela - mãe da Giullia",
         text: "\u201CMinha filha estuda h\xE1 anos neste col\xE9gio e sempre foi a nossa segunda casa. Total confian\xE7a e seguran\xE7a. Gratid\xE3o sempre!\u201D",
-        style: "background-position-x: -48px;"
+        style: function style() {
+          return jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).width() > 736 ? "background-position-x: -48px;" : "background-position-x: -25px;";
+        }
       }]
     };
   },

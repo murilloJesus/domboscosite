@@ -25,6 +25,8 @@
 </template>
 
 <script>
+    import $ from 'jquery'
+
     export default {
         name: "Depoimentos",
         data: () => {
@@ -50,7 +52,9 @@
                     source: "/public/images/depoimentos/depoimentos_3.png",
                     name: "Luciana Portela - mãe da Giullia",
                     text: `“Minha filha estuda há anos neste colégio e sempre foi a nossa segunda casa. Total confiança e segurança. Gratidão sempre!”`,
-                    style: `background-position-x: -48px;`
+                    style: () => {
+                        return $(document).width() > 736 ? `background-position-x: -48px;` : `background-position-x: -25px;`
+                    }
                   },
               ]
           }
