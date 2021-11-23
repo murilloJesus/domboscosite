@@ -1467,6 +1467,7 @@ input, select, textarea {
 				.row.gtr-200 {
 					margin-top: -40px;
 					margin-left: -40px;
+                    margin-right: 0px !important;
 				}
 
 					.row.gtr-200 > * {
