@@ -210,6 +210,11 @@
     }
 
     @media screen and (max-width: 980px) {
+
+        .image-gallery {
+            height: 280px;
+        }
+
         .column{
             width: 25%;
         }
