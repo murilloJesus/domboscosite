@@ -19449,31 +19449,31 @@ __webpack_require__.r(__webpack_exports__);
       segmentos: [{
         name: "Ensino Infantil",
         desc: "Despertar, envolver, descobrir.",
-        source: "/public/images/segmentos/segmento_infantil.png",
+        classe: "image-content image-educacao-infantil",
         href: 'segmento-infantil',
         text: ["A Educa\xE7\xE3o Infantil \xE9 uma fase muito importante na forma\xE7\xE3o do aluno. Brincar \xE9 a principal tarefa dos pequenos, pois \xE9 na brincadeira que descobrem o mundo \xE0 sua volta, comunicam-se e se conectam em um ambiente social.", "O nosso Col\xE9gio tem um ambiente de  aprendizagem agrad\xE1vel para que seu filho possa desenvolver suas capacidades e est\xEDmulos imaginativos, al\xE9m de ser acolhedor."]
       }, {
         name: "Fundamental I",
         desc: "Autonomia, observação e desenvolver.",
-        source: "/public/images/segmentos/segmento_fundamental_1.png",
+        classe: "image-content image-educacao-fundamental-inicial",
         href: 'segmento-funtamental-I',
         text: ["Nos Anos Iniciais do Ensino Fundamental (1\xBA ao 5\xBA ano), os estudantes aprendem usando a criatividade e a imagina\xE7\xE3o. Respeitar o tempo e as caracter\xEDsticas de cada aluno \xE9 essencial.", "Em nosso col\xE9gio aplicamos o trabalho em grupo, a solu\xE7\xE3o colaborativa de situa\xE7\xF5es-problema e a promo\xE7\xE3o da criatividade para, dessa forma, melhorar a capacidade de decis\xE3o e a capacidade de desenvolver saberes, considerando seu pr\xF3prio cotidiano."]
       }, {
         name: "Fundamental II",
         desc: "Independência, reflexão e raciocínio.",
-        source: "/public/images/segmentos/segmento_fundamental_2.png",
+        classe: "image-content image-educacao-fundamental-final",
         href: 'segmento-funtamental-II',
         text: ["\xC9 no per\xEDodo dos Anos Finais em que os alunos passam por grandes mudan\xE7as f\xEDsicas, emocionais e psicol\xF3gicas.", "Assim, para que o aprendizado seja significativo e divertido, oferecemos uma extensa variedade de g\xEAneros textuais, distribu\xEDdos nas diversas disciplinas. Isso favorece o letramento no ambiente educativo. Com atividades que contemplam m\xE9todos para \u201Caprender a aprender\u201D, desenvolvendo a interdisciplinaridade, fortalecendo a qualidade do ensino e concretizando a aprendizagem como um ato de intera\xE7\xE3o entre autor, professor, aluno, fam\xEDlia e escola."]
       }, {
         name: "Período Integral e Ensino Bilíngue",
         desc: false,
-        source: false,
+        classe: false,
         href: 'segmento-integral-bilingue',
         text: ["Para ampliar a oportunidade de exposi\xE7\xE3o das crian\xE7as \xE0 l\xEDngua inglesa, o Per\xEDodo Integral e Bil\xEDngue \xE9 a op\xE7\xE3o que mais se aproxima dos padr\xF5es internacionais.", "O objetivo deste projeto \xE9 reduzir as lacunas na educa\xE7\xE3o b\xE1sica escolar brasileira no que diz respeito \xE0 l\xEDngua inglesa, tornando-a um elemento de forma\xE7\xE3o permanente para os nossos alunos."]
       }, {
         name: "Cursos Extracurriculares",
         desc: false,
-        source: false,
+        classe: "image-content-extra image-educacao-extra",
         href: 'segmento-extracurriculares',
         text: ["O aluno podem frequentar os cursos extracurriculares de sua prefer\xEAncia no per\xEDodo inverso \xE0 aula, no qual desenvolvem suas capacidades e habilidades, com participa\xE7\xE3o de professores capacitados.", "As atividades extracurriculares visam produzir conhecimento que contribuam para o desenvolvimento social, cultural e art\xEDstico do aluno."]
       }]
@@ -19978,13 +19978,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* TEXT */
   )]), _ctx.actived.desc ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.actived.desc), 1
   /* TEXT */
-  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <ul class=\"meta\">\n                        <li class=\"icon fa-clock\">15 minutes ago</li>\n                        <li class=\"icon fa-comments\"><a href=\"#\">8</a></li>\n                    </ul> ")]), _ctx.actived.source ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("a", {
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), _ctx.actived.classe ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("a", {
     key: 0,
-    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background-image: url('".concat(_ctx.actived.source, "')")),
     href: "#",
-    "class": "image featured image-content-home"
-  }, null, 4
-  /* STYLE */
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([_ctx.actived.classe, "image featured"])
+  }, null, 2
+  /* CLASS */
   )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.actived.text, function (text, t_index) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", {
       key: t_index,
@@ -19994,7 +19993,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     );
   }), 128
   /* KEYED_FRAGMENT */
-  )), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <a href=\"#\" class=\"button alt\">Continue Lendo</a> ")])], 512
+  ))])], 512
   /* NEED_PATCH */
   )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Sidebar "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Recent Posts "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", null, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_16, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.segmentos, function (item, index) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", {

@@ -26,16 +26,12 @@
                 <header>
                     <h3><a href="#">{{actived.name}}</a></h3>
                     <p v-if="actived.desc">{{actived.desc}}</p>
-                    <!-- <ul class="meta">
-                        <li class="icon fa-clock">15 minutes ago</li>
-                        <li class="icon fa-comments"><a href="#">8</a></li>
-                    </ul> -->
                 </header>
                 <a
-                    v-if="actived.source"
-                    :style="`background-image: url('${actived.source}')`"
+                    v-if="actived.classe"
                     href="#"
-                    class="image featured image-content-home"
+                    :class="actived.classe"
+                    class="image featured"
                 ></a>
                 <p
                 v-for="(text, t_index) in actived.text"
@@ -43,7 +39,6 @@
                 class="paragraph">
                     {{text}}
                 </p>
-                <!-- <a href="#" class="button alt">Continue Lendo</a> -->
             </article>
         </div>
     </div>
@@ -82,7 +77,7 @@
                     {
                         name: "Ensino Infantil",
                         desc: "Despertar, envolver, descobrir.",
-                        source: "/public/images/segmentos/segmento_infantil.png",
+                        classe: "image-content image-educacao-infantil",
                         href: 'segmento-infantil',
                         text: [
                             `A Educação Infantil é uma fase muito importante na formação do aluno. Brincar é a principal tarefa dos pequenos, pois é na brincadeira que descobrem o mundo à sua volta, comunicam-se e se conectam em um ambiente social.`,
@@ -92,7 +87,7 @@
                     {
                         name: "Fundamental I",
                         desc: "Autonomia, observação e desenvolver.",
-                        source: "/public/images/segmentos/segmento_fundamental_1.png",
+                        classe: "image-content image-educacao-fundamental-inicial",
                         href: 'segmento-funtamental-I',
                         text: [
                             `Nos Anos Iniciais do Ensino Fundamental (1º ao 5º ano), os estudantes aprendem usando a criatividade e a imaginação. Respeitar o tempo e as características de cada aluno é essencial.`,
@@ -102,7 +97,7 @@
                     {
                         name: "Fundamental II",
                         desc: "Independência, reflexão e raciocínio.",
-                        source: "/public/images/segmentos/segmento_fundamental_2.png",
+                        classe: "image-content image-educacao-fundamental-final",
                         href: 'segmento-funtamental-II',
                         text: [
                             `É no período dos Anos Finais em que os alunos passam por grandes mudanças físicas, emocionais e psicológicas.`,
@@ -112,7 +107,7 @@
                     {
                         name: "Período Integral e Ensino Bilíngue",
                         desc: false,
-                        source: false,
+                        classe: false,
                         href: 'segmento-integral-bilingue',
                         text: [
                             `Para ampliar a oportunidade de exposição das crianças à língua inglesa, o Período Integral e Bilíngue é a opção que mais se aproxima dos padrões internacionais.`,
@@ -122,7 +117,7 @@
                     {
                         name: "Cursos Extracurriculares",
                         desc: false,
-                        source: false,
+                        classe: "image-content-extra image-educacao-extra",
                         href: 'segmento-extracurriculares',
                         text: [
                             `O aluno podem frequentar os cursos extracurriculares de sua preferência no período inverso à aula, no qual desenvolvem suas capacidades e habilidades, com participação de professores capacitados.`,
