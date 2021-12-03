@@ -51,7 +51,7 @@
                 <depoimentos></depoimentos>
 
                 <!-- COLÉGIO -->
-                <colegio></colegio>
+                {{-- <colegio></colegio> --}}
 
                 <!-- CONTEUDO -->
                 <conteudo></conteudo>
