@@ -1,12 +1,7 @@
 <template>
-    <article class="box post">
+    <article>
         <header>
-            <h3><a href="#">Estruturas</a></h3>
-            <!-- <p>With a smaller subtitle that attempts to elaborate</p> -->
-            <!-- <ul class="meta">
-                            <li class="icon fa-clock">15 minutes ago</li>
-                            <li class="icon fa-comments"><a href="#">8</a></li>
-                        </ul> -->
+            <h3>Estrutura</h3>
         </header>
 
         <div class="container">

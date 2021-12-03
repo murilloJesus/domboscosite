@@ -27,9 +27,8 @@
                                 </header>
 
                                 <a
-                                    style="background-image: url('/public/images/segmentos/segmento_infantil.png')"
                                     href="#"
-                                    class="image featured image-content"
+                                    class="image featured image-content image-educacao-infantil"
                                 ></a>
 
                                 <section>
@@ -49,9 +48,8 @@
                                 </header>
 
                                 <a
-                                    style="background-image: url('/public/images/segmentos/segmento_fundamental_1.png')"
                                     href="#"
-                                    class="image featured image-content"
+                                    class="image featured image-content image-educacao-fundamental-inicial"
                                 ></a>
 
                                 <section>
@@ -71,9 +69,8 @@
                                 </header>
 
                                 <a
-                                    style="background-image: url('/public/images/segmentos/segmento_fundamental_2.png')"
                                     href="#"
-                                    class="image featured image-content"
+                                    class="image featured image-content image-educacao-fundamental-final"
                                 ></a>
 
                                 <section>
@@ -108,6 +105,11 @@
                                 </section>
 
                                 <div id="extracurriculares" class="anchoring"></div>
+
+                                <a
+                                    href="#"
+                                    class="image featured image-content-extra image-educacao-extra"
+                                ></a>
 
                                 <header>
                                     <h3>Cursos Extracurriculares</h3>

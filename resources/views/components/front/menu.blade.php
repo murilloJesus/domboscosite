@@ -15,6 +15,7 @@
                                     {{-- <li><a href="#">Material Didático</a></li> --}}
                                 </ul>
                             </li>
+                            <li><a href="/colegio#premiacoes">Premiações</a></li>
                             <li><a href="/colegio#estrutura">Estrutura</a></li>
                         </ul>
                     </li>

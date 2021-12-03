@@ -24,7 +24,7 @@
                             <h3>História</h3>
                         </header>
 
-                        <a href="#" class="image featured image-content image-historia"></a>
+                        <a href="#" class="image featured image-content-colegio image-historia"></a>
 
                         <section>
                             <p>
@@ -77,7 +77,7 @@
                             <h3>Missão, Visão e Valores</h3>
                         </header>
 
-                        <a href="#" class="image featured image-content image-missao-visao-valores"></a>
+                        <a href="#" class="image featured image-content-colegio image-missao-visao-valores"></a>
 
                         <section>
 
@@ -114,6 +114,13 @@
                                 Criatividade
                             </p>
                         </section>
+
+                        <div id="premiacoes" class="anchoring"></div>
+                        <header>
+                            <h3>Premiações</h3>
+                        </header>
+
+                        <a href="#" class="image featured image-content-colegio image-premiacoes"></a>
 
                         <div id="estrutura" class="anchoring"></div>
                         <estrutura></estrutura>

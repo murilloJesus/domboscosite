@@ -48,9 +48,7 @@
             <div class="row gtr-200">
 
                 <!-- DEPOIMENTOS -->
-                <div class="col-12">
-                    <depoimentos></depoimentos>
-                </div>
+                <depoimentos></depoimentos>
 
                 <!-- COLÉGIO -->
                 <colegio></colegio>

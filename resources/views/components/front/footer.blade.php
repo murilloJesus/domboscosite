@@ -6,6 +6,12 @@
                         <section>
                             <div class="row">
                                 <div class="col-8 col-12-medium">
+                                    <ul class="contact">
+                                        <li><a class="icon brands fa-facebook-f" target="_blank" href="https://www.facebook.com/domboscosorocaba/"><span class="label">Facebook</span></a></li>
+                                        <li><a class="icon brands fa-instagram" target="_blank" href="https://www.instagram.com/domboscosorocaba/"><span class="label">Instagram</span></a></li>
+                                        <li><a class="icon brands fa-youtube" target="_blank" href="https://www.youtube.com/c/DomBoscoSorocaba"><span class="label">Youtube</span></a></li>
+                                        <li><a class="icon brands fa-linkedin-in" target="_blank" href="https://www.linkedin.com/company/colegiodombosco/"><span class="label">LinkedIn</span></a></li>
+                                    </ul>
                                     <h2 class="major text-start"><span>Mapa do site</span></h2>
                                     <div class="row">
                                         <div class="col-6">
@@ -17,6 +23,7 @@
                                                     <a href="/proposta-pedagogica" class="second-level">Proposta Pedagógica</a>
                                                         <a href="/proposta-pedadogica#infantil" class="third-level">Infantil</a>
                                                         <a href="/proposta-pedadogica#fundamental" class="third-level">Fundamental</a>
+                                                    <a href="/colegio#premiacoes" class="second-level">Premiações</a>
                                                     <a href="/colegio#estrutura" class="second-level">Estrutura</a>
                                             </div>
                                         </div>
@@ -46,9 +53,11 @@
                                             &q=Colégio+Dom+Bosco+Sorocaba">
                                     </iframe>
                                     <br><br> --}}
-                                    <strong>Colégio Dom Bosco Sorocaba</strong>
-                                    <br><br>
-                                    <p>Av. Mario José Azevedo de Almeida, 65 <br> Jardim Piazza Di Roma, Sorocaba <br> SP, 18051-740</p>
+                                    <div class="contato">
+                                        <strong>Colégio Dom Bosco Sorocaba</strong>
+                                        <br><br>
+                                        <p>Av. Mario José Azevedo de Almeida, 65 <br> Jardim Piazza Di Roma, Sorocaba <br> SP, 18051-740</p>
+                                    </div>
                                 </div>
                             </div>
                         </section>

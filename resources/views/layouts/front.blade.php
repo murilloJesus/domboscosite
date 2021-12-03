@@ -39,13 +39,6 @@
 
 		</div>
 
-        <ul class="contact">
-            <li><a class="icon brands fa-facebook-f" target="_blank" href="https://www.facebook.com/domboscosorocaba/"><span class="label">Facebook</span></a></li>
-            <li><a class="icon brands fa-instagram" target="_blank" href="https://www.instagram.com/domboscosorocaba/"><span class="label">Instagram</span></a></li>
-            <li><a class="icon brands fa-youtube" target="_blank" href="https://www.youtube.com/c/DomBoscoSorocaba"><span class="label">Youtube</span></a></li>
-            <li><a class="icon brands fa-linkedin-in" target="_blank" href="https://www.linkedin.com/company/colegiodombosco/"><span class="label">LinkedIn</span></a></li>
-        </ul>
-
         <a href="https://api.whatsapp.com/send?phone=5515974025810&amp;text=" target="_blank"><img class="whatsapp" src="/public/images/contatowhats.png"></a>
 
         <div class="alert text-center cookiealert" role="alert">

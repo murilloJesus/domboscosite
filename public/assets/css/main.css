@@ -1750,7 +1750,7 @@ input, select, textarea {
 			top: 0;
 			width: 100%;
 			height: 100%;
-			background: url("/public/assets/images/overlay.png");
+			/* background: url("/public/assets/images/overlay.png"); */
 			border-radius: 8px;
 		}
 
@@ -1954,6 +1954,7 @@ input, select, textarea {
 				outline: 0;
 				background: #848C94;
 				text-align: center;
+                padding: 0 !important;
 			}
 
 				ul.contact li a:before {
@@ -2585,6 +2586,7 @@ input, select, textarea {
 		text-align: center;
 		padding: 8em 0 8em 0;
 		background-color: #152445;
+		background-image: url("/public/assets/images/overlay.png");
         color: white;
 	}
 
@@ -2602,6 +2604,10 @@ input, select, textarea {
 				background: #152445;
                 color: white;
 			}
+
+    #footer .contato {
+        font-size: 1.25em;
+    }
 
 
 
@@ -2628,6 +2634,7 @@ input, select, textarea {
 				border-color: #C1CAC5;
 				border-width: 2px;
 				line-height: 1em;
+                font-size: 12px;
 			}
 
 /* XLarge */
@@ -2712,7 +2719,7 @@ input, select, textarea {
 		/* Footer */
 
 			#footer {
-				padding: 6em 0 6em 0;
+				padding: 3em 0 3em 0;
 			}
 
             /* Alterações Responsivo para caber o  menu e as midias sociais no NAV */
@@ -3011,7 +3018,7 @@ input, select, textarea {
             ul.contact {
                 z-index: 1000;
                 top: 0px;
-                padding-top: 5px;
+                padding-top: 0px;
             }
 
             ul.contact li {
@@ -3168,8 +3175,18 @@ input, select, textarea {
 
 
             ul.contact {
-                display: flex;
-                flex-direction: column;
+                position: relative;
+            }
+
+            ul.contact li a {
+                width: 48px;
+                height: 48px;
+            }
+
+            ul.contact li a:before {
+                color: #f2f5f3;
+                font-size: 32px;
+                line-height: 48px;
             }
 
 	}
@@ -3223,11 +3240,31 @@ input, select, textarea {
         background-position-y: -250px;
     }
 
+    .image-content-colegio {
+        min-height: 250px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: -250px;
+        background-position-x: center;
+    }
+
     .image-content-home {
         min-height: 250px;
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: -90px;
+    }
+
+    .image-content-extra {
+        min-height: 250px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: center;
+        background-position-y: center;
+    }
+
+    .image-content-extra::before {
+        background-image: none !important;
     }
 
     .image-educacao-infantil {
@@ -3242,6 +3279,10 @@ input, select, textarea {
         background-image: url('/public/images/proposta-pedagogica/fundamental-2.jpeg');
     }
 
+    .image-educacao-extra {
+        background-image: url('/public/images/segmentos/extra.png');
+    }
+
     .image-historia {
         background-image: url('/public/images/historia/historia.jpeg');
     }
@@ -3250,9 +3291,17 @@ input, select, textarea {
         background-image: url('/public/images/historia/missao.jpeg');
     }
 
+    .image-premiacoes {
+        background-image: url('/public/images/historia/premiacao.png');
+    }
+
 
     @media (min-width:100px) {
         .image-content {
+            background-position-y: 0px;
+        }
+
+        .image-content-colegio {
             background-position-y: 0px;
         }
 
@@ -3268,6 +3317,10 @@ input, select, textarea {
     @media (min-width:576px) {
         .image-content {
             background-position-y: -90px;
+        }
+
+        .image-content-colegio {
+            background-position-y: 0px;
         }
 
         .image-content-home {
@@ -3286,7 +3339,11 @@ input, select, textarea {
 
     @media (min-width:992px) {
         .image-content {
-            background-position-y: -175px;
+            background-position-y: -50px;
+        }
+
+        .image-content-colegio {
+            background-position-y: -47px;
         }
 
         .image-content-home {
@@ -3297,6 +3354,10 @@ input, select, textarea {
     @media (min-width: 1200px) {
         .image-content {
             background-position-y: -250px;
+        }
+
+        .image-content-colegio {
+            background-position-y: -65px;
         }
 
         .image-content-home {
