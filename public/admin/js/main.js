@@ -147,4 +147,5 @@ function main() {
             scrollbarPosition: "outside",
             theme:"light-1"
         });
+
     });

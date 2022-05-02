@@ -25,7 +25,7 @@ class Api {
     getObject(instance){
         return {
             id: instance.id ? instance.id : null,
-            name: insatance.name ? instance.name : '',
+            name: instance.name ? instance.name : '',
         }
     }
 

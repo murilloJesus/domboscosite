@@ -5,22 +5,22 @@
                 <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
                     <li {{ $isPage('home') ? 'class=active' : '' }}><a href="/administrador/"><i class="notika-icon notika-house"></i>Home</a>
                     </li>
-                    <li {{ $isPage('paginas') ? 'class=active' : '' }}><a data-toggle="tab" href="#Paginas"><i class="notika-icon notika-edit"></i> Paginas</a>
+                    <li {{ $isPage('paginas') ? 'class=active' : '' }}><a href="/administrador/paginas"><i class="notika-icon notika-edit"></i> Paginas</a>
                     </li>
-                    <li {{ $isPage('banners') ? 'class=active' : '' }}><a data-toggle="tab" href="#Banners"><i class="notika-icon notika-windows"></i> Banners</a>
+                    <li {{ $isPage('banners') ? 'class=active' : '' }}><a href="/administrador/banners"><i class="notika-icon notika-windows"></i> Banners</a>
                     </li>
-                    <li {{ $isPage('imagens') ? 'class=active' : '' }}><a data-toggle="tab" href="#Appviews"><i class="notika-icon notika-app"></i>Imagens</a>
+                    <li {{ $isPage('galerias') ? 'class=active' : '' }}><a href="/administrador/galerias"><i class="notika-icon notika-app"></i>Galerias</a>
                     </li>
-                    <li><a data-toggle="tab" href="#mailbox"><i class="notika-icon notika-mail"></i> Email</a>
+                    {{-- <li><a data-toggle="tab" href="#mailbox"><i class="notika-icon notika-mail"></i> Email</a>
                     </li>
                     <li><a data-toggle="tab" href="#Charts"><i class="notika-icon notika-bar-chart"></i> Charts</a>
                     </li>
                     <li><a data-toggle="tab" href="#Forms"><i class="notika-icon notika-form"></i> Forms</a>
                     </li>
-                    <li><a data-toggle="tab" href="#Page"><i class="notika-icon notika-support"></i> Pages</a>
+                    <li><a data-toggle="tab" href="#Page"><i class="notika-icon notika-support"></i> Pages</a> --}}
                     </li>
                 </ul>
-                <div class="tab-content custom-menu-content">
+                {{-- <div class="tab-content custom-menu-content">
                     <div id="Paginas" class="tab-pane notika-tab-menu-bg animated flipInX {{ $isPage('paginas') ? 'active' : '' }}">
                         <ul class="notika-main-menu-dropdown">
                             <li><a href="/administrador/paginas">Gerenciar</a>
@@ -90,7 +90,7 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

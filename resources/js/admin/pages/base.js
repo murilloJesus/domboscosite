@@ -1,12 +1,20 @@
 import Tabela from '../componentes/table.vue'
 import Formulario from '../componentes/form.vue'
+import Galeria from '../componentes/gallery.vue'
 import * as Inputs from '../input/index.js'
+
+import $ from 'jquery'
 
 export default {
     components: {
         Tabela,
         Formulario,
+        Galeria,
         ...Inputs
+    },
+    async beforeMount(){
+        await this.controller.getData()
+        $("#app").show()
     },
     provide(){
         return {

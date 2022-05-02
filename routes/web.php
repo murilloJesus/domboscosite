@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GalleryController;
 use App\Http\Middleware\RegisterAccess;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
